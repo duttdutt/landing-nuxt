@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"build": "nuxt build",
-		"dev": "nuxt dev",
+		"dev": "nuxt dev --port 3333 --open",
 		"generate": "nuxt generate",
 		"preview": "nuxt preview",
 		"lint": "eslint .",
@@ -13,6 +13,7 @@
 		"nuxt-typecheck": "npx nuxt typecheck"
 	},
 	"dependencies": {
+		"@nuxtjs/i18n": "9.5.6",
 		"nuxt": "^3.17.5",
 		"vue": "^3.5.17",
 		"vue-router": "^4.5.1"

@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-	modules: ['@nuxt/eslint'],
+	modules: ['@nuxt/eslint', '@nuxtjs/i18n'],
 
 	devtools: {
 		enabled: true,
@@ -21,5 +21,30 @@ export default defineNuxtConfig({
 				indent: 'tab',
 			},
 		},
+	},
+
+	/**
+	 * LINK: https://i18n.nuxtjs.org/
+	 */
+	i18n: {
+		detectBrowserLanguage: {
+			useCookie: true,
+			fallbackLocale: 'ru',
+		},
+		strategy: 'no_prefix',
+		locales: [
+			{
+				code: 'en',
+				name: 'English',
+				file: 'en.json',
+			},
+			{
+				code: 'ru',
+				name: 'Русский',
+				file: 'ru.json',
+			},
+		],
+		lazy: true,
+		defaultLocale: 'ru',
 	},
 })
