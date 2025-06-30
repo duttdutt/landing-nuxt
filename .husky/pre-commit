@@ -1,2 +1,3 @@
 pnpm vue-typecheck
 pnpm nuxt-typecheck
+pnpm lint:fix

@@ -2,17 +2,17 @@
 import antfu from '@antfu/eslint-config'
 import withNuxt from './.nuxt/eslint.config.mjs'
 
-export default withNuxt({
-  antfu({
-    formatters: {
-      html: true,
-      css: true,
-      scss: true,
-      markdown: true
-    },
-    pnpm: true,
-    typescript: true,
-    vue: true
-  }),
-})
-
+export default withNuxt(
+	antfu({
+		type: 'app',
+		vue: true,
+		formatters: {
+			css: true,
+		},
+		stylistic: {
+			quotes: 'single',
+			indent: 'tab',
+		},
+		typescript: true,
+	}),
+)

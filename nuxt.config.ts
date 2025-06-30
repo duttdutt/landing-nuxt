@@ -1,33 +1,25 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2025-05-15',
+	modules: ['@nuxt/eslint'],
 
-  eslint: {
-    config: {
-      stylistic: {
-        semi: true,
-        quotes: 'single',
-        jsx: false,
-        indent: 'tab',
-        commaDangle: "always",
-        blockSpacing: true,
-        arrowParens: true
-      },
-      formatters: {
+	devtools: {
+		enabled: true,
+	},
+	compatibilityDate: '2025-05-15',
 
-      }
-    }
-  },
+	typescript: {
+		builder: 'vite',
+		strict: true,
+		typeCheck: true,
+	},
 
-  typescript: {
-    builder: 'vite',
-    strict: true,
-    typeCheck: true
-  },
-
-  devtools: {
-    enabled: true
-  },
-
-  modules: ['@nuxt/eslint']
+	eslint: {
+		config: {
+			standalone: false,
+			stylistic: {
+				commaDangle: 'only-multiline',
+				indent: 'tab',
+			},
+		},
+	},
 })
