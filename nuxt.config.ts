@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url'
 export default defineNuxtConfig({
 	modules: ['@nuxt/eslint', '@nuxtjs/i18n', '@nuxtjs/google-fonts', '@nuxt/devtools'],
 
+	ssr: true,
 	devtools: {
 		enabled: true,
 	},
