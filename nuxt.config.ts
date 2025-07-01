@@ -2,7 +2,7 @@ import { fileURLToPath } from 'node:url'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-	modules: ['@nuxt/eslint', '@nuxtjs/i18n', '@nuxtjs/google-fonts'],
+	modules: ['@nuxt/eslint', '@nuxtjs/i18n', '@nuxtjs/google-fonts', '@nuxt/devtools'],
 
 	devtools: {
 		enabled: true,
