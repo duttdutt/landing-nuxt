@@ -1,1 +1,2 @@
-@forward 'variables';
+@use './_variables/index' as *;
+@use './_global/index' as *;
