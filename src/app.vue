@@ -7,3 +7,7 @@ const layout = 'main-layout'
 		<NuxtPage />
 	</NuxtLayout>
 </template>
+
+<style lang="scss" module>
+@use '~/assets/scss/_main.scss' as *;
+</style>
