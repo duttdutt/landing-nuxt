@@ -105,5 +105,8 @@ export default defineNuxtConfig({
 		],
 		lazy: true,
 		defaultLocale: 'ru',
+		bundle: {
+			optimizeTranslationDirective: false,
+		},
 	},
 })
