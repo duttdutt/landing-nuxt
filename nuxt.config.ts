@@ -2,12 +2,30 @@ import { fileURLToPath } from 'node:url'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxt/eslint', '@nuxtjs/i18n'],
+	modules: ['@nuxt/eslint', '@nuxtjs/i18n'],
 
-  alias: {
-    public: fileURLToPath(new URL('./public', import.meta.url)),
-    constants: fileURLToPath(new URL('./constants', import.meta.url)),
-  },
+	devtools: {
+		enabled: true,
+	},
+
+	srcDir: './src',
+	alias: {
+		public: fileURLToPath(new URL('./public', import.meta.url)),
+		constants: fileURLToPath(new URL('./constants', import.meta.url)),
+	},
+
+	compatibilityDate: '2025-05-15',
+
+	vite: {
+		vue: {
+			style: {
+				trim: true,
+			},
+			features: {
+				optionsAPI: false,
+			},
+		},
+	},
 
 	typescript: {
 		builder: 'vite',
