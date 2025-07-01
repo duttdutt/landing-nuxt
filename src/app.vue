@@ -1,11 +1,9 @@
-<template>
-	<div>
-		Test
-	</div>
-</template>
+<script setup lang="ts">
+const layout = 'main-layout'
+</script>
 
-<style lang="scss">
-div {
-	color: $red;
-}
-</style>
+<template>
+	<NuxtLayout :name="layout">
+		<NuxtPage />
+	</NuxtLayout>
+</template>
