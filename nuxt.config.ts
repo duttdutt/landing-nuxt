@@ -2,7 +2,7 @@ import { fileURLToPath } from 'node:url'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-	modules: ['@nuxt/eslint', '@nuxtjs/i18n'],
+	modules: ['@nuxt/eslint', '@nuxtjs/i18n', '@nuxtjs/google-fonts'],
 
 	devtools: {
 		enabled: true,
@@ -53,6 +53,24 @@ export default defineNuxtConfig({
 	},
 
 	/**
+	 * Fonts
+	 * LINK: https://google-fonts.nuxtjs.org/
+	 */
+	googleFonts: {
+		families: {
+			Montserrat: {
+				wght: '100..900',
+				ital: '300..700',
+			},
+		},
+		display: 'swap',
+		prelod: true,
+		outputDir: 'assets',
+		stylePath: 'assets/google-fonts.css',
+	},
+
+	/**
+	 * Internationalization
 	 * LINK: https://i18n.nuxtjs.org/
 	 */
 	i18n: {
