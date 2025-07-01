@@ -7,16 +7,21 @@ export default defineNuxtConfig({
 	devtools: {
 		enabled: true,
 	},
-
 	srcDir: './src',
+
+	/**
+	 * Aliases
+	 */
 	alias: {
 		scss: fileURLToPath(new URL('./src/assets/scss', import.meta.url)),
 		public: fileURLToPath(new URL('./public', import.meta.url)),
 		constants: fileURLToPath(new URL('./constants', import.meta.url)),
 	},
-
 	compatibilityDate: '2025-05-15',
 
+	/**
+	 * Vite
+	 */
 	vite: {
 		css: {
 			preprocessorOptions: {
@@ -36,12 +41,18 @@ export default defineNuxtConfig({
 		},
 	},
 
+	/**
+	 * TypeScript
+	 */
 	typescript: {
 		builder: 'vite',
 		strict: true,
 		typeCheck: true,
 	},
 
+	/**
+	 * ESLint
+	 */
 	eslint: {
 		config: {
 			standalone: false,
