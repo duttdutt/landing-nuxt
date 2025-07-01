@@ -10,6 +10,7 @@ export default defineNuxtConfig({
 
 	srcDir: './src',
 	alias: {
+		scss: fileURLToPath(new URL('./src/assets/scss', import.meta.url)),
 		public: fileURLToPath(new URL('./public', import.meta.url)),
 		constants: fileURLToPath(new URL('./constants', import.meta.url)),
 	},
@@ -17,6 +18,14 @@ export default defineNuxtConfig({
 	compatibilityDate: '2025-05-15',
 
 	vite: {
+		css: {
+			preprocessorOptions: {
+				scss: {
+					additionalData: '@use "scss/_main.scss" as *;',
+				},
+			},
+			preprocessorMaxWorkers: true,
+		},
 		vue: {
 			style: {
 				trim: true,
