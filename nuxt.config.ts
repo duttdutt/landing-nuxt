@@ -70,14 +70,14 @@ export default defineNuxtConfig({
 	googleFonts: {
 		families: {
 			Montserrat: {
-				wght: '100..900',
-				ital: '300..700',
+				wght: '200..900',
+				ital: '200..700',
 			},
 		},
 		display: 'swap',
 		prelod: true,
 		outputDir: 'assets',
-		stylePath: 'assets/google-fonts.css',
+		stylePath: 'google-fonts.css',
 	},
 
 	/**
