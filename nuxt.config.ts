@@ -77,8 +77,10 @@ export default defineNuxtConfig({
 		},
 		display: 'swap',
 		prelod: true,
-		outputDir: 'assets',
-		stylePath: 'google-fonts.css',
+		download: false,
+		outputDir: 'assets/fonts',
+		stylePath: 'assets/fonts/google-fonts.css',
+		useStylesheet: true,
 	},
 
 	/**
