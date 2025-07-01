@@ -27,7 +27,7 @@ export default defineNuxtConfig({
 		css: {
 			preprocessorOptions: {
 				scss: {
-					additionalData: '@use "scss/_main.scss" as *;',
+					additionalData: '',
 				},
 			},
 			preprocessorMaxWorkers: true,
