@@ -1,11 +1,13 @@
+import { fileURLToPath } from 'node:url'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-	modules: ['@nuxt/eslint', '@nuxtjs/i18n'],
+  modules: ['@nuxt/eslint', '@nuxtjs/i18n'],
 
-	devtools: {
-		enabled: true,
-	},
-	compatibilityDate: '2025-05-15',
+  alias: {
+    public: fileURLToPath(new URL('./public', import.meta.url)),
+    constants: fileURLToPath(new URL('./constants', import.meta.url)),
+  },
 
 	typescript: {
 		builder: 'vite',
