@@ -1,9 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+</script>
 
 <template>
 	<div>
-		<header>Header</header>
+		<Navbar />
 		<slot />
-		<footer>Footer</footer>
+		<Footer />
 	</div>
 </template>
