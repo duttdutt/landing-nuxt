@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { appDescription, appName } from './constants/head'
 
-const layout = 'main-layout'
+definePageMeta({
+	layout: 'main-layout',
+})
 
 useHead({
 	title: appName,
@@ -23,7 +25,7 @@ useHead({
 </script>
 
 <template>
-	<NuxtLayout :name="layout">
+	<NuxtLayout>
 		<NuxtPage />
 	</NuxtLayout>
 </template>
