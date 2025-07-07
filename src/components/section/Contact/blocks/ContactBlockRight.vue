@@ -1,0 +1,105 @@
+<script setup lang="ts"></script>
+
+<template>
+	<div :class="$style.right">
+		<div :class="$style.rightInfo">
+			<h3>Форма связи</h3>
+			<div>
+				Наши сотрудники трудятся во благо наших клиентов, создавая
+				продукт, который поможет всем и каждому добиться успехов и
+				уверенности прямо здесь и сейчас.
+			</div>
+			<div>Мы всегда готовы помочь Вам — только позвольте помочь.</div>
+			<div>Оставьте заявку и мы с Вами свяжемся.</div>
+		</div>
+		<ul :class="$style.rightContacts">
+			<li>
+				<i class="pi pi-phone" />
+				<span :class="$style.phone">+7 978 432 83 82</span>
+			</li>
+			<li>
+				<i class="pi pi-at" />
+				<span :class="$style.email">glovbox@inbox.ru</span>
+			</li>
+		</ul>
+	</div>
+</template>
+
+<style lang="scss" module>
+.right {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: var(--space-l);
+
+	@media (max-width: 768px) {
+		gap: var(--space-s);
+	}
+
+	.rightInfo {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-xs);
+
+		min-width: clamp(220px, 30vw, 400px);
+
+		user-select: none;
+
+		h3 {
+			color: var(--text-primary);
+			font-size: var(--step-4);
+			font-weight: 700;
+			word-break: break-word;
+			hyphens: auto;
+		}
+
+		div {
+			cursor: pointer;
+
+			color: var(--text-primary-muted);
+			font-size: var(--step--1);
+			line-height: 1.2;
+			word-break: break-word;
+			hyphens: auto;
+		}
+	}
+
+	.rightContacts {
+		padding-bottom: var(--space-xl);
+
+		@media (max-width: 768px) {
+			padding-bottom: 0;
+		}
+
+		li {
+			display: flex;
+			align-items: center;
+
+			margin-bottom: var(--space-xs);
+
+			@media (max-width: 768px) {
+				margin-bottom: var(--space-2xs);
+			}
+
+			&::selection {
+				background-color: var(--selection-color);
+				color: var(--selection-bg-color);
+			}
+
+			i {
+				margin-right: var(--space-2xs);
+
+				line-height: 1;
+				font-size: var(--step-0);
+				color: var(--color-primary-lighter);
+			}
+
+			.phone,
+			.email {
+				font-size: var(--step--0);
+				font-weight: 500;
+			}
+		}
+	}
+}
+</style>
