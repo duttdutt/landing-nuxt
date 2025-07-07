@@ -1,1 +1,35 @@
-{}
+{
+	"navbar": {
+		"link1": "We",
+		"link2": "Goods",
+		"link3": "Benefits",
+		"link4": "Contacts"
+	},
+	"hero": {
+		"primary_heading": "Become a better person with our sports equipment",
+		"secondary_heading_underline_part1": "Excellent",
+		"secondary_heading": "{0} quality and {1} selection",
+		"secondary_heading_underline_part2": "very wide",
+		"description_part1": "Equipment and gear for any purpose — from home workouts to professional competitions.",
+		"description_part2": "Reliable quality and a wide selection for every skill level. Trusted by beginners and professionals alike."
+	},
+	"additional_info": {
+		"wholesale": "Wholesale",
+		"connection": "or",
+		"retail": "retail",
+		"last_part": "— we offer both options."
+	},
+	"motivation": {
+		"lines": [
+			"СТАНЬ СИЛЬНЕЕ.",
+			"СТАНЬ ВЫНОСЛИВЕЕ.",
+			"СТАНЬ НЕПОБЕДИМЫМ.",
+			"ПРЕОДОЛЕЙ СВОИ ГРАНИЦЫ.",
+			"СДЕЛАЙ ВЫБОР — ОН В ТВОИХ РУКАХ."
+		]
+	},
+	"button": {
+		"toOrder": "To order",
+		"goods": "goods"
+	}
+}
