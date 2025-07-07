@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import IconCircle from '@/components/ui/icons/IconCircle.vue'
+
 function scrollToContactSection() {
 	const target = document.getElementById('contact') as HTMLElement
 
