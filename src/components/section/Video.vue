@@ -10,7 +10,7 @@ export default defineComponent({
 	<section>
 		<div class="video-background">
 			<video autoplay loop muted class="video">
-				<source src="@/assets/mov.mp4">
+				<source src="~/assets/video/Video.mp4">
 				Your browser does not support the video tag.
 			</video>
 			<div class="overlay" @click="test">
