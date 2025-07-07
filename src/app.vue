@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import { appDescription, appName } from './constants/head'
 
-definePageMeta({
-	layout: 'main-layout',
-})
-
 useHead({
 	title: appName,
 	meta: [
@@ -12,6 +8,7 @@ useHead({
 		{ name: 'apple-mobile-web-app-title', content: appName },
 	],
 	htmlAttrs: {
+		class: 'dark-mode',
 		lang: 'ru',
 	},
 	link: [
