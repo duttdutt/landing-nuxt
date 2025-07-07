@@ -2,6 +2,8 @@
 const props = defineProps<{
 	modelValue: string
 	error: string
+	id?: string
+	label?: string
 }>()
 
 defineEmits(['update:modelValue'])
