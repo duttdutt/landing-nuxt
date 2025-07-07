@@ -2,11 +2,19 @@ import { fileURLToPath } from 'node:url'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-	modules: ['@nuxt/eslint', '@nuxtjs/i18n', '@nuxtjs/google-fonts', '@nuxt/devtools'],
+	modules: [
+		'@nuxt/eslint',
+		'@nuxtjs/i18n',
+		'@nuxtjs/google-fonts',
+		'@nuxt/devtools',
+	],
 
 	ssr: true,
 	devtools: {
 		enabled: true,
+	},
+	dir: {
+		public: '../public',
 	},
 	srcDir: './src',
 
@@ -27,7 +35,7 @@ export default defineNuxtConfig({
 		css: {
 			preprocessorOptions: {
 				scss: {
-					additionalData: '',
+					// additionalData: '@use main.scss',
 				},
 			},
 			preprocessorMaxWorkers: true,
