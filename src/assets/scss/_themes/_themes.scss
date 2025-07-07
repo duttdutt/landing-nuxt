@@ -1,0 +1,81 @@
+@use '@/assets/scss/_variables' as *;
+@use 'sass:color';
+
+html {
+	--c-black: #000;
+	--c-white: #fff;
+}
+
+html.light-mode {
+	/* --- Backgrounds --- */
+	--bg-primary: #{$gray-100};
+
+	/* --- Borders --- */
+	--border-primary: #{$blue-900};
+
+	/* --- Colors --- */
+
+	/* --- Text --- */
+	--text-primary: #{$blue-950};
+
+	/* --- Links --- */
+	--link: #{$blue-100};
+	--link-hover: #{$blue-100};
+}
+
+html.dark-mode {
+	/* --- Backgrounds --- */
+	--bg-primary: #{$blue-950};
+	--bg-mark: #{$white};
+	--bg-blue: #{$primary-dark};
+	--bg-faq: #{$gray-150};
+	--bg-faq-hover: #{$gray-100};
+	--bg-faq-answer: #{$gray-150};
+
+	/* --- Borders --- */
+	--border-primary: #{$blue-900};
+	--border-primary-hover: #{$blue-800};
+	--border-reversed: #{$gray-200};
+	--border-reversed-bright: #{$gray-500};
+
+	/* --- Colors --- */
+	--color-primary: #{$primary-dark};
+	--color-primary-lighter: #{$primary-dark-lighter};
+	--color-primary-darker: #{$primary-dark-darker};
+	--color-secondary: #{$blue-0};
+	--color-purple: #{$purple};
+	--color-purple-lighter: #{$purple-lighter};
+	--color-orange: #{$orange};
+	--color-orange-lighter: #{$orange-lighter};
+	--color-pink: #{$pink};
+	--color-pink-lighter: #{$pink-lighter};
+	--color-red: #{$red};
+	--c-btn-benefits-content: #{$blue-950};
+
+	/* --- Text --- */
+	--text-primary: #{$gray-50};
+	--text-primary-muted: #{$gray-150};
+	--text-reversed: #{$blue-850};
+
+	/* --- Links --- */
+	--link: #{$gray-100};
+	--link-hover: #{$blue-150};
+	--link-active: #{$blue-300};
+
+	/* --- Benefits --- */
+	--color-blue-bright: #{$blue-300};
+
+	/* --- Form --- */
+	--bg-input: #{$blue-900};
+	--border-input: #{$blue-850};
+	--border-input-hover: #{$blue-650};
+	--border-input-focus: #{$blue-450};
+	--border-faq: #{$blue-900};
+	--caret-color: #{$blue-450};
+
+	/* --- Selection --- */
+	--selection-color: #{$primary-dark};
+	--selection-bg-color: #{$blue-0};
+	--selection-color-input: #{$blue-450};
+	--selection-bg-color-input: #{$white};
+}

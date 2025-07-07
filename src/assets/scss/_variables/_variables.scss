@@ -1,0 +1,58 @@
+@use 'sass:color';
+
+$white: #fff;
+
+$primary-dark: #0b6dff;
+$primary-dark-lighter: color.scale($primary-dark, $lightness: 10%);
+$primary-dark-darker: color.scale($primary-dark, $blackness: 10%);
+
+$blue-0: #f0f9ff;
+$blue-50: #e0f2fe;
+$blue-100: #bae6fd;
+$blue-150: #a5dcfb;
+$blue-200: #7dd3fc;
+$blue-250: #58c7fa;
+$blue-300: #38bdf8;
+$blue-350: #20acef;
+$blue-400: #0ea5e9;
+$blue-450: #0b90d1;
+$blue-500: #0284c7;
+$blue-550: #0273b0;
+$blue-600: #0369a1;
+$blue-650: #055b8e;
+$blue-700: #075985;
+$blue-750: #0a4e74;
+$blue-800: #0c4a6e;
+$blue-850: #0b3e5c;
+$blue-900: #082f49;
+$blue-950: #061e37;
+
+$gray-0: #f9fafb;
+$gray-50: #f3f4f6;
+$gray-100: #e5e7eb;
+$gray-150: #d1d5db;
+$gray-200: #9ca3af;
+$gray-250: #8a909c;
+$gray-300: #6b7280;
+$gray-350: #5d636f;
+$gray-400: #4b5563;
+$gray-450: #3f4856;
+$gray-500: #374151;
+$gray-550: #2f3948;
+$gray-600: #1f2937;
+$gray-650: #19222f;
+$gray-700: #111827;
+$gray-750: #0e141f;
+$gray-800: #0f172a;
+$gray-850: #0c131f;
+$gray-900: #0e1525;
+$gray-950: #0b1120;
+
+$purple: #5762d5;
+$purple-lighter: color.scale($purple, $lightness: 10%);
+$pink: #b388eb;
+$pink-lighter: color.scale($pink, $lightness: 10%);
+$orange: #ff7b00;
+$orange-lighter: color.scale($orange, $lightness: 10%);
+
+$red: #ff7777;
