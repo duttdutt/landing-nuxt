@@ -1,9 +1,10 @@
 <script setup lang="ts">
+import useScrollTo from '@/utils/scrollTo';
+
 const { t } = useI18n()
 
 function handleClick() {
-	const target = document.getElementById('contact') as HTMLElement
-	target.scrollIntoView({ behavior: 'smooth' })
+	useScrollTo('#contact', { behavior: 'smooth' })
 }
 </script>
 
@@ -22,7 +23,7 @@ function handleClick() {
 	align-items: center;
 	justify-content: center;
 
-	width: 15vh;
+	width: 8rem;
 	height: 2.25rem;
 	padding: 0.5rem 1rem;
 
