@@ -12,9 +12,8 @@
 @use 'sass:color';
 
 footer {
-	--gap: 5em;
+	--gap: 5px;
 	--line: 1px;
-	--color: rgba(255, 255, 255, 0.2);
 
 	display: flex;
 	align-items: center;
@@ -24,21 +23,19 @@ footer {
 
 	user-select: none;
 
-	color: var(--text-primary-muted);
-
-	background: #000000;
+	background: var(--color-black);
 	background-image:
 		linear-gradient(
 			-90deg,
 			transparent calc(var(--gap) - var(--line)),
-			var(--color) calc(var(--gap) - var(--line) + 1px),
-			var(--color) var(--gap)
+			var(--color-gray) calc(var(--gap) - var(--line) + 1px),
+			var(--color-gray) var(--gap)
 		),
 		linear-gradient(
 			0deg,
 			transparent calc(var(--gap) - var(--line)),
-			var(--color) calc(var(--gap) - var(--line) + 1px),
-			var(--color) var(--gap)
+			var(--color-gray) calc(var(--gap) - var(--line) + 1px),
+			var(--color-gray) var(--gap)
 		);
 	background-size: var(--gap) var(--gap);
 

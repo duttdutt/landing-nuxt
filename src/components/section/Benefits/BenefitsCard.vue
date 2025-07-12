@@ -30,7 +30,7 @@ defineProps<{
 	padding-bottom: 20px;
 	margin: var(--space-2xs);
 
-	color: #fff;
+	color: var(--text-benefits);
 
 	.header {
 		display: flex;
@@ -39,22 +39,22 @@ defineProps<{
 		gap: var(--space-2xs);
 
 		svg {
-			color: #fc5245;
+			color: var(--color-orange);
 			height: var(--step-1);
 		}
 
 		.text {
 			text-wrap: balance;
-			font-weight: 700;
 			font-size: var(--step-2);
+			font-weight: 700;
 		}
 	}
 
 	.body {
 		text-wrap: balance;
 		font-size: var(--step-0);
-		line-height: 1.3;
 		font-weight: 500;
+		line-height: 1.3;
 	}
 }
 </style>

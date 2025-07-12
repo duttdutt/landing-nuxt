@@ -50,11 +50,11 @@ import BenefitsCard from './BenefitsCard.vue'
 	min-height: 100vh;
 	padding: var(--space-m);
 
-	background-color: #0b0b0b;
+	background-color: var(--bg-benefits);
 
 	& *::selection {
-		background-color: #fc5245;
-		color: #fff;
+		background-color: var(--color-orange);
+		color: var(--color-white);
 	}
 
 	@media (max-width: 480px) {
@@ -77,22 +77,24 @@ import BenefitsCard from './BenefitsCard.vue'
 
 			user-select: none;
 
-			text-transform: uppercase;
-			background-color: #fc5245;
-			border-radius: 1em;
+			color: var(--color-white);
+			background-color: var(--color-orange);
 			font-weight: 700;
 			font-size: var(--step--1);
+			text-transform: uppercase;
+			border-radius: 1em;
 		}
 
 		.benefintsPreHeading {
-			color: #fc5245;
+			padding-bottom: var(--space-xs);
+
+			color: var(--color-orange);
 			font-weight: 600;
 			font-size: var(--step-3);
-			padding-bottom: var(--space-xs);
 		}
 
 		.benefitsHeading {
-			color: var(--c-white);
+			color: var(--text-benefits);
 			font-size: var(--step-5);
 		}
 	}

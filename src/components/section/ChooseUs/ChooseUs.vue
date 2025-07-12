@@ -32,7 +32,7 @@ function updateColors() {
 			lineEl.style.color = '#277DFF'
 		}
 		else {
-			lineEl.style.color = '#FFF'
+			lineEl.style.color = '#f9fafb'
 		}
 	})
 }
