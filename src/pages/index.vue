@@ -14,7 +14,7 @@ definePageMeta({
 </script>
 
 <template>
-	<div>
+	<main>
 		<Hero2 />
 		<AdditionalInfo />
 		<ChooseUs />
@@ -23,5 +23,5 @@ definePageMeta({
 		<Benefits />
 		<Faq />
 		<ContactSection />
-	</div>
+  </main>
 </template>
