@@ -30,9 +30,9 @@ html.light-mode {
 	--text-benefits: #{$gray-950};
 
 	/* --- Links --- */
-	--link: #{$blue-600};
-	--link-hover: #{$blue-500};
-	--link-active: #{$blue-700};
+	--link: #{$gray-600};
+	--link-hover: #{$blue-600};
+	--link-active: #{$blue-400};
 
 	/* --- Forms / misc --- */
 	--bg-input: #{$gray-50};
