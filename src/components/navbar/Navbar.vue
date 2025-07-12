@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import IconLogo from '../ui/icons/IconLogo.vue'
 import Link from '../ui/Link.vue'
 import NavbarButton from './NavbarButton.vue'
 
@@ -10,12 +11,10 @@ const { t } = useI18n()
 		<div :class="$style.navbarContainer">
 			<div :class="$style.navbarContent">
 				<a :class="$style.logoLink" href="/">
-					<img
-						src="@/assets/images/Logo.svg"
-						alt="Logo Image"
-						width="150"
-						height="40"
-					>
+					<IconLogo
+						:class="$style.logoLink"
+						:width="120"
+					/>
 				</a>
 				<nav :class="$style.navLinks">
 					<Link href="#we">
@@ -49,9 +48,11 @@ const { t } = useI18n()
 <style module lang="scss">
 .navbarWrapper {
 	width: 100%;
+	overflow: visible;
 
 	position: sticky;
 	top: 0;
+	left: 0;
 	z-index: 10000;
 
 	font-size: var(--step-0);
@@ -100,7 +101,7 @@ const { t } = useI18n()
 				-moz-user-select: none;
 				-ms-user-select: none;
 
-				height: 40px;
+				color: var(--text-primary);
 			}
 
 			.navLinks {
