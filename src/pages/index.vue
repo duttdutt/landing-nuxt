@@ -23,5 +23,5 @@ definePageMeta({
 		<Benefits />
 		<Faq />
 		<ContactSection />
-  </main>
+	</main>
 </template>
