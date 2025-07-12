@@ -13,15 +13,17 @@
 		"nuxt-typecheck": "npx nuxt typecheck"
 	},
 	"dependencies": {
+		"@nuxtjs/color-mode": "3.5.2",
 		"@nuxtjs/google-fonts": "3.2.0",
 		"@nuxtjs/i18n": "9.5.6",
+		"@vueuse/nuxt": "13.5.0",
 		"nuxt": "^3.17.5",
 		"vue": "^3.5.17",
 		"vue-router": "^4.5.1"
 	},
 	"devDependencies": {
 		"@antfu/eslint-config": "^4.16.1",
-		"@nuxt/devtools": "^2.6.0",
+		"@nuxt/devtools": "2.5.0",
 		"@nuxt/eslint": "1.4.1",
 		"eslint": "^9.30.0",
 		"eslint-plugin-format": "^1.0.1",
