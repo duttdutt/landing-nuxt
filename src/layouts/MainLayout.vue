@@ -1,17 +1,14 @@
-<script setup lang="ts">
-</script>
-
 <template>
-	<div class="wrapper">
+	<div :class="$style.wrapper">
 		<Navbar />
 		<slot />
 		<Footer />
 	</div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss" module>
 .wrapper {
-	height: 100vh;
 	width: 100vw;
+	min-width: 400px;
 }
 </style>
