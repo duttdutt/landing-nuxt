@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import useScrollTo from '@/utils/scrollTo';
+import useScrollTo from '@/utils/scrollTo'
 
 const { t } = useI18n()
 
