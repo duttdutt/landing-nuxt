@@ -35,7 +35,6 @@ function scrollToContactSection() {
 .addinitialSection {
 	margin-block: var(--space-3xs);
 
-	// max-width: 1680px;
 	min-width: 100%;
 	padding-inline: var(--space-xs);
 	padding-block: var(--space-s);
@@ -54,7 +53,7 @@ function scrollToContactSection() {
 	transition: 0.3s all;
 
 	border: 1px solid var(--bg-blue);
-	color: var(--c-white);
+	color: var(--text-primary);
 
 	.info {
 		font-size: var(--step-0);
@@ -80,11 +79,11 @@ function scrollToContactSection() {
 			text-transform: uppercase;
 
 			background-color: var(--color-orange);
-			color: var(--c-white);
+			color: var(--color-white);
 			font-weight: 800;
 
 			&:hover {
-				background-color: var(--c-white);
+				background-color: var(--color-white);
 				color: var(--color-orange);
 			}
 		}
@@ -96,11 +95,11 @@ function scrollToContactSection() {
 			text-transform: uppercase;
 
 			background-color: var(--color-primary);
-			color: var(--c-white);
+			color: var(--color-white);
 			font-weight: 800;
 
 			&:hover {
-				background-color: var(--c-white);
+				background-color: var(--color-white);
 				color: var(--color-primary);
 			}
 		}

@@ -41,15 +41,15 @@ function toggleAnswer(id: number) {
 	padding-block: var(--space-l);
 
 	background-color: var(--bg-faq);
-	color: var(--text-reversed);
+	color: var(--text-faq);
 
 	h3 {
-		color: var(--text-reversed);
+		color: var(--text-faq);
 	}
 
 	.wrapper {
 		max-width: 80vw;
-		border-bottom: 1px solid var(--border-reversed);
+		border-bottom: 1px solid var(--border-faq);
 	}
 }
 </style>

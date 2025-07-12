@@ -10,9 +10,6 @@ import UnderlineText from '../ui/UnderlineText.vue'
 				<div :class="$style.grid">
 					<h1 :class="$style.heading">
 						<mark>{{ $t('hero.primary_heading') }}</mark>
-						<!-- <span>
-              <UnderlineText>Прекрасное</UnderlineText> качество и <UnderlineText>широкий</UnderlineText> ассортимент
-            </span> -->
 						<span>
 							<i18n-t keypath="hero.secondary_heading">
 								<UnderlineText>{{ $t('hero.secondary_heading_underline_part1') }}</UnderlineText>
@@ -42,9 +39,11 @@ import UnderlineText from '../ui/UnderlineText.vue'
 
 <style lang="scss" module>
 .hero {
+	min-width: 400px;
+
 	.wrapper {
 		max-width: 1680px;
-		min-width: 100%;
+		min-width: 400px;
 		padding-inline: var(--space-xs);
 		margin-bottom: var(--space-2xs);
 		margin-inline: auto;
@@ -54,7 +53,6 @@ import UnderlineText from '../ui/UnderlineText.vue'
 		.innerWrapper {
 			padding-inline: var(--space-3xl);
 			padding-block: var(--space-l);
-			min-width: 100%;
 
 			background-color: var(--bg-blue);
 
@@ -82,16 +80,18 @@ import UnderlineText from '../ui/UnderlineText.vue'
 
 		max-width: 20ch;
 
+		font-weight: 700;
 		font-size: var(--step-4);
 		text-wrap: balance;
 
 		mark {
 			background-color: var(--bg-mark);
+			color: var(--text-hero-primary);
 		}
 
 		span {
 			font-size: var(--step-2);
-			color: var(--c-white);
+			color: var(--text-hero-secondary);
 		}
 	}
 
@@ -105,14 +105,14 @@ import UnderlineText from '../ui/UnderlineText.vue'
 		text-wrap: balance;
 		font-style: italic;
 		font-size: var(--step-1);
-		color: var(--text-primary);
+		color: var(--text-hero-secondary);
 	}
 
 	.buttons {
 		display: flex;
-		align-items: center;
 		flex-direction: row;
 		flex-wrap: wrap;
+		align-items: center;
 		justify-content: flex-start;
 		gap: var(--space-xs);
 
@@ -127,35 +127,35 @@ import UnderlineText from '../ui/UnderlineText.vue'
 			cursor: pointer;
 			transition: all 0.2s;
 
-			border: 1px solid #fff;
-			text-transform: uppercase;
+			color: #fff;
 			font-size: var(--step--1);
 			font-weight: 800;
-			color: #fff;
+			text-transform: uppercase;
 			letter-spacing: 1px;
 			user-select: none;
+			border: 1px solid var(--color-white);
 
 			&:active > svg {
 				transform: scale(1.3);
 			}
 
 			&:first-child {
-				background-color: #fff;
+				background-color: var(--color-white);
 				color: #000;
 
 				&:hover {
 					background-color: transparent;
-					color: #fff;
+					color: var(--color-white);
 				}
 			}
 
 			&:last-child {
 				background-color: transparent;
-				color: #fff;
+				color: var(--color-white);
 
 				&:hover {
-					background-color: #fff;
-					color: #000;
+					background-color: var(--color-white);
+					color: var(--color-black);
 				}
 			}
 		}

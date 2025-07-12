@@ -6,8 +6,6 @@
 
 <style module lang="scss">
 .underline {
-	font-style: normal;
-
 	text-decoration: underline;
 	text-decoration-color: var(--color-orange);
 	text-decoration-thickness: 0.2rem;
