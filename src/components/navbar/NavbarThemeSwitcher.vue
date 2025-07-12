@@ -37,15 +37,18 @@ function toggleTheme() {
 	width: 2.3rem;
 	height: 2.3rem;
 
-	background-color: var(--bg-primary);
-	color: var(--text-primary);
-	border: 2px solid transparent;
 	cursor: pointer;
 
-	transition: background 0.3s ease;
+	transition: background-color 0.3s ease;
+
+	color: var(--text-primary-muted);
+	background-color: var(--bg-primary);
+	border: 1px solid var(--border-primary);
+	border-radius: 8px;
 
 	&:hover {
-		background-color: var(--bg-primary-hover);
+		color: var(--text-primary);
+		background-color: var(--border-primary);
 	}
 
 	&:focus-visible {
@@ -54,12 +57,8 @@ function toggleTheme() {
 		box-shadow: 0 0 0 3px rgba(11, 109, 255, 0.4);
 	}
 
-	&Icon {
+	svg {
 		display: flex;
-	}
-
-	&Dark &Icon {
-		transform: rotate(180deg);
 	}
 }
 </style>
