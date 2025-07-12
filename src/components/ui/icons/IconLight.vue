@@ -1,7 +1,11 @@
 <template>
 	<svg
-		width="16" height="16" viewBox="0 0 16 16" fill="currentColor"
-		aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+		width="16"
+		height="16"
+		viewBox="0 0 16 16"
+		fill="currentColor"
+		aria-hidden="true"
+		xmlns="http://www.w3.org/2000/svg"
 	>
 		<path
 			d="M8.75881 14.2396C8.75881 14.6593 8.41855 14.9996 7.99882 14.9996C7.57908 14.9996 7.23881 14.6593 7.23881 14.2396V12.7596C7.23881 12.3398 7.57908 11.9996 7.99882 11.9996C8.41855 11.9996 8.75881 12.3398 8.75881 12.7596V14.2396Z"
