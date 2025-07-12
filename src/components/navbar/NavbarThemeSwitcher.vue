@@ -12,18 +12,17 @@ function toggleTheme() {
 </script>
 
 <template>
-	<button
-		:class="[
-			$style.themeToggle,
-			{ [$style.themeToggleDark]: isDark },
-		]"
-		aria-label="Переключение темы"
-		@click="toggleTheme"
-	>
-		<span :class="$style.themeToggleIcon">
-			<component :is="isDark ? IconLight : IconDark" />
-		</span>
-	</button>
+  <client-only>
+    <button
+      :class="$style.themeToggle"
+      aria-label="Переключение темы"
+      @click="toggleTheme"
+    >
+      <span :class="$style.themeToggleIcon">
+        <component :is="isDark ? IconLight : IconDark" />
+      </span>
+    </button>
+  </client-only>
 </template>
 
 <style module lang="scss">
