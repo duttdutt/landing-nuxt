@@ -1,22 +1,26 @@
 <script setup lang="ts">
 import IconLogo from '../ui/icons/IconLogo.vue'
+
+const localePath = useLocalePath()
 </script>
 
 <template>
-	<a
+	<nuxt-link
 		:class="$style.logoLink"
-		href="/"
+		:to="localePath('/')"
+		aria-label="Home"
+		title="Home"
 	>
-		<IconLogo
-			:class="$style.logoLink"
-			:width="120"
-		/>
-	</a>
+		<IconLogo :width="120" />
+	</nuxt-link>
 </template>
 
 <style lang="scss" module>
 .logoLink {
 	display: block;
+
+	max-width: 120px;
+	width: clamp(80px, 10vw, 120px);
 
 	cursor: pointer;
 

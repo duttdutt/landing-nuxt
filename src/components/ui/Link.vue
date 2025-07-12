@@ -1,15 +1,17 @@
-<!-- Link.vue -->
 <script setup lang="ts">
-defineProps<{
-	// TODO: добавить флаг для 'active'
+const props = defineProps<{
 	href: string
+	active?: boolean
 }>()
 </script>
 
 <template>
-	<a :href="href" :class="$style.link">
+	<nuxt-link
+		:to="props.href"
+		:class="[$style.link, props.active && $style.active]"
+	>
 		<slot />
-	</a>
+	</nuxt-link>
 </template>
 
 <style lang="scss" module>
@@ -32,6 +34,14 @@ defineProps<{
 
 	&:active {
 		color: var(--link-active);
+	}
+
+	&.active {
+		color: var(--link-active);
+
+		&::after {
+			width: 100%;
+		}
 	}
 
 	&::after {
