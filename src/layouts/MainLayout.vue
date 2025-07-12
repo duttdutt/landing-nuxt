@@ -1,6 +1,6 @@
 <template>
 	<div :class="$style.wrapper">
-		<Navbar />
+		<Header />
 		<slot />
 		<Footer />
 	</div>
@@ -8,7 +8,7 @@
 
 <style lang="scss" module>
 .wrapper {
-	width: 100vw;
-	min-width: 400px;
+	min-height: 100vh;
+	width: 100%;
 }
 </style>
