@@ -37,10 +37,18 @@ function toggleLocale() {
 
 	cursor: pointer;
 
-	transition: background 0.3s ease;
+	transition: background-color 0.3s ease;
 
 	background-color: var(--bg-primary);
-	border: 2px solid transparent;
-	color: var(--text-primary);
+	border: 1px solid var(--border-primary);
+	border-radius: 8px;
+
+	& svg {
+		width: 1.5rem;
+	}
+
+	&:hover {
+		background-color: var(--border-primary);
+	}
 }
 </style>
