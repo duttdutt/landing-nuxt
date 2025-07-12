@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-	<footer>
+	<footer :class="$style.footerRoot">
 		<div :class="$style.container">
 			GlovBox
 		</div>
@@ -11,7 +11,7 @@
 <style module lang="scss">
 @use 'sass:color';
 
-footer {
+.footerRoot {
 	--gap: 5px;
 	--line: 1px;
 
