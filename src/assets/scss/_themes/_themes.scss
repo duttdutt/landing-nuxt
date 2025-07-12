@@ -1,36 +1,69 @@
 @use '@/assets/scss/_variables' as *;
 @use 'sass:color';
 
-html {
-	--c-black: #000;
-	--c-white: #fff;
-}
-
 html.light-mode {
 	/* --- Backgrounds --- */
-	--bg-primary: #{$gray-100};
+	--bg-primary: #{$gray-0};
+	--bg-blue: #{$primary-light};
+	--bg-mark: #{$gray-0};
+	--bg-benefits: #{$gray-100};
 
 	/* --- Borders --- */
-	--border-primary: #{$blue-900};
+	--border-primary: #{$gray-100};
+	--border-primary-hover: #{$gray-150};
 
 	/* --- Colors --- */
+	--color-primary: #{$primary-light};
+	--color-primary-lighter: #{$primary-light-lighter};
+	--color-primary-darker: #{$primary-light-darker};
+	--color-white: #{$gray-0};
+	--color-black: #{$gray-950};
+	--color-gray: #{$gray-650};
+	--color-orange: #{$orange};
 
 	/* --- Text --- */
-	--text-primary: #{$blue-950};
+	--text-primary: #{$gray-700};
+	--text-primary-muted: #{$gray-400};
+	--text-button: #{$gray-100};
+	--text-hero-primary: #{$gray-950};
+	--text-hero-secondary: #{$gray-0};
+	--text-benefits: #{$gray-950};
 
 	/* --- Links --- */
-	--link: #{$blue-100};
-	--link-hover: #{$blue-100};
+	--link: #{$blue-600};
+	--link-hover: #{$blue-500};
+	--link-active: #{$blue-700};
+
+	/* --- Forms / misc --- */
+	--bg-input: #{$gray-50};
+	--border-input: #{$gray-150};
+	--border-input-hover: #{$blue-300};
+	--border-input-focus: #{$blue-500};
+	--caret-color: #{$blue-450};
+
+	/* --- Faq --- */
+	--bg-faq: #{$gray-150};
+	--bg-faq-hover: #{$gray-0};
+	--bg-faq-answer: #{$gray-50};
+	--text-faq: #{$blue-850};
+	--text-faq-number: #{$blue-850};
+	--border-faq: #{$gray-200};
+	--border-faq-bright: #{$blue-950};
+
+	/* --- Selection --- */
+	--selection-color: #{$white};
+	--selection-bg-color: #{$primary-dark};
+	--selection-color-input: #{$white};
+	--selection-bg-color-input: #{$primary-dark};
 }
 
 html.dark-mode {
 	/* --- Backgrounds --- */
 	--bg-primary: #{$blue-950};
+	--bg-primary-hover: #{$blue-900};
 	--bg-mark: #{$white};
 	--bg-blue: #{$primary-dark};
-	--bg-faq: #{$gray-150};
-	--bg-faq-hover: #{$gray-100};
-	--bg-faq-answer: #{$gray-150};
+	--bg-benefits: #{$blue-950};
 
 	/* --- Borders --- */
 	--border-primary: #{$blue-900};
@@ -51,11 +84,18 @@ html.dark-mode {
 	--color-pink-lighter: #{$pink-lighter};
 	--color-red: #{$red};
 	--c-btn-benefits-content: #{$blue-950};
+	--color-white: #{$gray-0};
+	--color-black: #{$gray-950};
+	--color-gray: #{$gray-650};
 
 	/* --- Text --- */
 	--text-primary: #{$gray-50};
 	--text-primary-muted: #{$gray-150};
 	--text-reversed: #{$blue-850};
+	--text-button: #{$gray-50};
+	--text-hero-primary: #{$gray-850};
+	--text-hero-secondary: #{$gray-50};
+	--text-benefits: #{$gray-100};
 
 	/* --- Links --- */
 	--link: #{$gray-100};
@@ -70,8 +110,17 @@ html.dark-mode {
 	--border-input: #{$blue-850};
 	--border-input-hover: #{$blue-650};
 	--border-input-focus: #{$blue-450};
-	--border-faq: #{$blue-900};
 	--caret-color: #{$blue-450};
+
+	/* --- Faq --- */
+	--bg-faq: #{$gray-150};
+	--bg-faq-hover: #{$gray-100};
+	--bg-faq-answer: #{$gray-150};
+	--text-faq: #{$blue-850};
+	--text-faq-number: #{$blue-850};
+	--border-faq: #{$blue-900};
+	--border-faq: #{$gray-200};
+	--border-faq-bright: #{$gray-500};
 
 	/* --- Selection --- */
 	--selection-color: #{$primary-dark};

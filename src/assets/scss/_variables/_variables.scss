@@ -1,10 +1,15 @@
 @use 'sass:color';
 
 $white: #fff;
+$black: #000;
 
 $primary-dark: #0b6dff;
 $primary-dark-lighter: color.scale($primary-dark, $lightness: 10%);
 $primary-dark-darker: color.scale($primary-dark, $blackness: 10%);
+
+$primary-light: #0f6dff;
+$primary-light-lighter: color.scale($primary-light, $lightness: 15%);
+$primary-light-darker: color.scale($primary-dark, $blackness: 10%);
 
 $blue-0: #f0f9ff;
 $blue-50: #e0f2fe;
@@ -52,7 +57,7 @@ $purple: #5762d5;
 $purple-lighter: color.scale($purple, $lightness: 10%);
 $pink: #b388eb;
 $pink-lighter: color.scale($pink, $lightness: 10%);
-$orange: #ff7b00;
+$orange: #fc5245;
 $orange-lighter: color.scale($orange, $lightness: 10%);
 
 $red: #ff7777;
