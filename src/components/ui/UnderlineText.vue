@@ -1,11 +1,11 @@
 <template>
-	<em :class="$style.underline">
+	<em :class="$style.underlineWrapper">
 		<slot />
 	</em>
 </template>
 
 <style module lang="scss">
-.underline {
+.underlineWrapper {
 	text-decoration: underline;
 	text-decoration-color: var(--color-orange);
 	text-decoration-thickness: 0.2rem;
