@@ -7,11 +7,37 @@ export default defineNuxtConfig({
 		'@nuxtjs/i18n',
 		'@nuxtjs/google-fonts',
 		'@nuxt/devtools',
+		'@vueuse/nuxt',
+		'@nuxtjs/color-mode',
 	],
 
 	ssr: true,
 	devtools: {
 		enabled: true,
+	},
+
+	/**
+	 * App
+	 */
+	app: {
+		head: {
+			viewport: 'width=device-width,initial-scale=1',
+			meta: [
+				{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
+				{ name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
+				{ name: 'theme-color', media: '(prefers-color-scheme: light)', content: 'white' },
+				{ name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#222222' },
+			],
+		},
+	},
+	/**
+	 * Color Mode
+	 */
+	colorMode: {
+		preference: 'dark',
+		fallback: 'dark',
+		storage: 'localStorage',
+		storageKey: 'color-mode',
 	},
 	dir: {
 		public: '../public',
@@ -85,9 +111,9 @@ export default defineNuxtConfig({
 		},
 		display: 'swap',
 		prelod: true,
-		download: false,
-		outputDir: 'assets/fonts',
-		stylePath: 'assets/fonts/google-fonts.css',
+		download: true,
+		// outputDir: 'assets/fonts',
+		// stylePath: 'assets/fonts/google-fonts.css',
 		useStylesheet: true,
 	},
 
@@ -96,27 +122,27 @@ export default defineNuxtConfig({
 	 * LINK: https://i18n.nuxtjs.org/
 	 */
 	i18n: {
-		detectBrowserLanguage: {
-			useCookie: true,
-			fallbackLocale: 'ru',
-		},
-		strategy: 'no_prefix',
+		detectBrowserLanguage: false,
+		strategy: 'prefix',
 		locales: [
 			{
 				code: 'en',
+				language: 'en-US',
 				name: 'English',
 				file: 'en.json',
 			},
 			{
 				code: 'ru',
+				language: 'ru-RU',
 				name: 'Русский',
 				file: 'ru.json',
 			},
 		],
 		lazy: true,
-		defaultLocale: 'ru',
+		defaultLocale: 'ru-RU',
 		bundle: {
 			optimizeTranslationDirective: false,
 		},
+		vueI18n: './i18n.config.ts',
 	},
 })
