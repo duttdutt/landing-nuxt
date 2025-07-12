@@ -49,20 +49,14 @@ function handleClick() {
 
 		font-size: var(--step-0);
 		font-weight: 700;
-		border-top: 1px solid var(--border-reversed);
-
-		&:hover > .accordionHeaderRight > .accordionQuestion {
-			border-bottom: 1px solid var(--border-reversed-bright);
-		}
-
-		@media (max-width: 768px) {
-			&:hover > .accordionHeaderRight > .accordionQuestion {
-				border-bottom: none;
-			}
-		}
+		border-top: 1px solid var(--border-faq);
 
 		&:hover > .accordionIcon {
 			background-color: var(--bg-faq-hover);
+		}
+
+		&:hover > .accordionHeaderRight > .accordionNumber {
+			color: var(--color-white);
 		}
 
 		.accordionHeaderRight {
@@ -81,14 +75,14 @@ function handleClick() {
 				width: var(--space-l);
 				min-width: var(--space-l);
 
-				background-color: var(--text-reversed);
-				color: var(--text-primary);
+				transition: color 0.25s ease;
+
+				background-color: var(--text-faq-number);
+				color: var(--bg-faq);
 			}
 
 			.accordionQuestion {
 				transition: all 0.75s ease;
-
-				border-bottom: 1px solid transparent;
 			}
 		}
 
@@ -103,7 +97,7 @@ function handleClick() {
 			position: relative;
 			transition: background-color 0.25s ease;
 
-			border: 1px solid var(--bg-input);
+			border: 1px solid var(--text-faq-number);
 			border-radius: 50%;
 
 			&::before {
@@ -113,11 +107,11 @@ function handleClick() {
 				height: var(--step--1);
 				width: 0.1rem;
 
-				transition: all 0.5s ease;
+				transition: all 0.2s ease;
 				transform: rotate(180deg);
 				opacity: 1;
 
-				background-color: var(--border-faq);
+				background-color: var(--text-faq-number);
 			}
 
 			&::after {
@@ -127,11 +121,10 @@ function handleClick() {
 				height: 0.09rem;
 				width: var(--step--1);
 
-				background-color: var(--border-faq);
+				background-color: var(--text-faq-number);
 			}
 
 			&.open::before {
-				transform: rotate(90deg);
 				opacity: 0;
 			}
 		}
@@ -147,13 +140,13 @@ function handleClick() {
 		opacity: 0;
 
 		line-height: 1.5;
-		background-color: var(--bg-faq-answer);
+		background-color: var(--bg-faq);
 
 		.accordionAnswer {
 			padding-inline: var(--step-2);
 			padding-block: var(--step--2);
 
-			color: var(--text-reversed);
+			color: var(--text-faq);
 			font-size: var(--step--1);
 		}
 
