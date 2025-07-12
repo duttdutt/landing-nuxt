@@ -71,9 +71,10 @@ onBeforeUnmount(() => {
 <style lang="scss" module>
 .chooseUs {
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
+	flex-direction: column;
 	align-items: center;
+
 	margin: 0;
 
 	width: 100%;
