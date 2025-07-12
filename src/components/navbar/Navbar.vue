@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import Link from '../ui/Link.vue'
 import NavbarButton from './NavbarButton.vue'
+
+const { t } = useI18n()
 </script>
 
 <template>
@@ -17,24 +19,28 @@ import NavbarButton from './NavbarButton.vue'
 				</a>
 				<nav :class="$style.navLinks">
 					<Link href="#we">
-						{{ $t("navbar.link1") }}
+						{{ t("navbar.link1") }}
 					</Link>
 					<Link href="#goods">
-						{{ $t('navbar.link2') }}
+						{{ t('navbar.link2') }}
 					</Link>
 					<Link href="#benefits">
-						{{ $t('navbar.link3') }}
+						{{ t('navbar.link3') }}
 					</Link>
 					<Link href="#contact">
-						{{ $t('navbar.link4') }}
+						{{ t('navbar.link4') }}
 					</Link>
 				</nav>
-				<NavbarButton
-					variant="solid"
-					to="#contact"
-				>
-					{{ $t('button.toOrder') }}
-				</NavbarButton>
+				<div :class="$style.buttons">
+					<NavbarLanguageSwitcherVue />
+					<NavbarThemeSwitcher />
+					<NavbarButton
+						variant="solid"
+						to="#contact"
+					>
+						{{ t('button.toOrder') }}
+					</NavbarButton>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -46,7 +52,7 @@ import NavbarButton from './NavbarButton.vue'
 
 	position: sticky;
 	top: 0;
-	z-index: 10;
+	z-index: 100;
 
 	font-size: var(--step-0);
 
@@ -69,7 +75,6 @@ import NavbarButton from './NavbarButton.vue'
 			transition: border-color 0.7s ease;
 			backdrop-filter: blur(100px);
 
-			// border-radius: 8px;
 			border: 1px solid var(--border-primary);
 
 			@media (max-width: 768px) {
@@ -110,9 +115,16 @@ import NavbarButton from './NavbarButton.vue'
 				}
 			}
 
-			&.navbarButton {
-				@media (max-width: 768px) {
-					margin-left: auto;
+			.buttons {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 0.5rem;
+
+				&.navbarButton {
+					@media (max-width: 768px) {
+						margin-left: auto;
+					}
 				}
 			}
 		}
