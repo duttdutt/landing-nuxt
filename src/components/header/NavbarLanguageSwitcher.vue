@@ -1,12 +1,10 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useRouter } from 'vue-router'
 import IconEn from '@/components/ui/icons/IconEn.vue'
 import IconRu from '@/components/ui/icons/IconRu.vue'
 
 const { locale } = useI18n()
 
-const router = useRouter()
 const switchLocalePath = useSwitchLocalePath()
 
 const isRu = computed(() => locale.value.startsWith('ru'))
@@ -14,12 +12,17 @@ const currentIcon = computed(() => (isRu.value ? IconRu : IconEn))
 const nextCode = computed(() => (isRu.value ? 'en' : 'ru'))
 
 function toggleLocale() {
-	router.push(switchLocalePath(nextCode.value))
+	navigateTo(switchLocalePath(nextCode.value))
 }
 </script>
 
 <template>
-	<button :class="$style.languageToggle" @click="toggleLocale">
+	<button
+		:class="$style.languageToggle"
+		type="button"
+		aria-label="Переключение языка"
+		@click="toggleLocale"
+	>
 		<component :is="currentIcon" />
 	</button>
 </template>
@@ -43,12 +46,17 @@ function toggleLocale() {
 	border: 1px solid var(--border-primary);
 	border-radius: 8px;
 
-	& svg {
-		width: 1.5rem;
-	}
-
 	&:hover {
 		background-color: var(--border-primary);
+	}
+
+	&:focus-visible {
+		outline: 2px solid var(--color-primary);
+		outline-offset: 2px;
+	}
+
+	& svg {
+		width: 1.5rem;
 	}
 }
 </style>
