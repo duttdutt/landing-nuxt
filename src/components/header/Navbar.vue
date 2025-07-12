@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import type { NavItem } from '@/types/navItem'
+import { useRoute } from 'vue-router'
 
 import Link from '../ui/Link.vue'
 
 const props = defineProps<{
 	items: NavItem[]
 }>()
+
+const route = useRoute()
 </script>
 
 <template>
@@ -15,6 +18,8 @@ const props = defineProps<{
 			:key="item.href"
 			:href="item.href"
 			:aria-label="item.label"
+			:active="route.hash === item.href"
+			role="navigation"
 		>
 			{{ item.label }}
 		</Link>
