@@ -5,9 +5,7 @@ const props = defineProps<{
 </script>
 
 <template>
-	<h3
-		:class="[$style.sectionTitle]"
-	>
+	<h3 :class="$style.sectionTitle">
 		{{ props.title }}
 		<slot />
 	</h3>
@@ -15,11 +13,11 @@ const props = defineProps<{
 
 <style module lang="scss">
 .sectionTitle {
-	color: var(--text-primary);
-	user-select: none;
 	display: flex;
 
+	color: var(--text-primary);
 	font-size: var(--step-6);
 	font-weight: 600;
+	user-select: none;
 }
 </style>
