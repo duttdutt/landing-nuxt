@@ -8,7 +8,7 @@ useHead({
 		{ name: 'apple-mobile-web-app-title', content: appName },
 	],
 	htmlAttrs: {
-		class: 'dark-mode',
+		class: useColorMode().forced,
 		lang: 'ru',
 	},
 	link: [
