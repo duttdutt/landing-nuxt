@@ -59,30 +59,29 @@ function handleClick() {
 
 <style lang="scss" module>
 .button {
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 500;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	// border-radius: 6px;
+
+	width: 15vh;
+
+	cursor: pointer;
 	transition:
 		background-color 0.2s ease,
 		color 0.2s ease;
-	border: none;
-	cursor: pointer;
-	line-height: 1;
-	user-select: none;
-	text-decoration: none;
-	letter-spacing: 0.5px;
-	font-weight: 800;
-	transition: all 0.45s ease;
-
 	animation: smoothPulse 1.5s ease-in-out infinite;
+
+	font-weight: 800;
+	letter-spacing: 0.5px;
+	text-decoration: none;
+	line-height: 1;
+	border: none;
+	user-select: none;
 }
 
 .solid {
 	background-color: var(--color-primary);
-	color: var(--text-primary);
+	color: var(--text-button);
 
 	&:hover {
 		background-color: var(--color-primary-lighter);
@@ -96,7 +95,6 @@ function handleClick() {
 
 .outline {
 	background-color: var(--text-primary);
-	border: 1.5px solid var(--color-primary);
 	color: var(--color-primary);
 
 	&:hover {
@@ -105,15 +103,6 @@ function handleClick() {
 
 	&:active {
 		background-color: var(--text-primary-muted);
-	}
-}
-
-.ghost {
-	background-color: transparent;
-	color: #666;
-
-	&:hover {
-		background-color: #efefef;
 	}
 }
 

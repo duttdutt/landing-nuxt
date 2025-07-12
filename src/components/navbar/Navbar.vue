@@ -52,7 +52,7 @@ const { t } = useI18n()
 
 	position: sticky;
 	top: 0;
-	z-index: 100;
+	z-index: 10000;
 
 	font-size: var(--step-0);
 
@@ -60,8 +60,8 @@ const { t } = useI18n()
 		display: flex;
 		justify-content: center;
 
-		padding: var(--space-xs);
 		width: 100%;
+		padding: var(--space-xs);
 
 		.navbarContent {
 			display: flex;
@@ -72,9 +72,9 @@ const { t } = useI18n()
 			// max-width: 1024px;
 			padding: var(--space-3xs) var(--space-xs);
 
-			transition: border-color 0.7s ease;
-			backdrop-filter: blur(100px);
+			transition: border-color 0.2s;
 
+			backdrop-filter: blur(100px);
 			border: 1px solid var(--border-primary);
 
 			@media (max-width: 768px) {
