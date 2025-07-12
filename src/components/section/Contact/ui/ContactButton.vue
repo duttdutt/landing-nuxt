@@ -50,7 +50,9 @@ const props = defineProps<{
 	}
 
 	&:hover {
-		color: var(--text-primary);
+		cursor: pointer;
+
+		color: var(--color-white);
 
 		&::before {
 			width: 125%;

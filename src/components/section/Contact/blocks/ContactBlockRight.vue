@@ -1,4 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import IconEmail from '@/components/ui/icons/IconEmail.vue'
+import IconPhone from '@/components/ui/icons/IconPhone.vue'
+</script>
 
 <template>
 	<div :class="$style.right">
@@ -14,11 +17,11 @@
 		</div>
 		<ul :class="$style.rightContacts">
 			<li>
-				<i class="pi pi-phone" />
+				<IconPhone />
 				<span :class="$style.phone">+7 978 432 83 82</span>
 			</li>
 			<li>
-				<i class="pi pi-at" />
+				<IconEmail />
 				<span :class="$style.email">glovbox@inbox.ru</span>
 			</li>
 		</ul>
@@ -54,8 +57,6 @@
 		}
 
 		div {
-			cursor: pointer;
-
 			color: var(--text-primary-muted);
 			font-size: var(--step--1);
 			line-height: 1.2;
@@ -83,14 +84,14 @@
 
 			&::selection {
 				background-color: var(--selection-color);
-				color: var(--selection-bg-color);
+				color: var(--color-white);
 			}
 
-			i {
+			svg {
 				margin-right: var(--space-2xs);
 
-				line-height: 1;
-				font-size: var(--step-0);
+				height: var(--step-1);
+				width: var(--step-1);
 				color: var(--color-primary-lighter);
 			}
 
