@@ -6,14 +6,10 @@ import IconPhone from '@/components/ui/icons/IconPhone.vue'
 <template>
 	<div :class="$style.right">
 		<div :class="$style.rightInfo">
-			<h3>Форма связи</h3>
-			<div>
-				Наши сотрудники трудятся во благо наших клиентов, создавая
-				продукт, который поможет всем и каждому добиться успехов и
-				уверенности прямо здесь и сейчас.
-			</div>
-			<div>Мы всегда готовы помочь Вам — только позвольте помочь.</div>
-			<div>Оставьте заявку и мы с Вами свяжемся.</div>
+			<h3>{{ $t('contact.heading') }}</h3>
+			<div>{{ $t('contact.description.part1') }}</div>
+			<div>{{ $t('contact.description.part2') }}</div>
+			<div>{{ $t('contact.description.part3') }}</div>
 		</div>
 		<ul :class="$style.rightContacts">
 			<li>

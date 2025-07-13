@@ -99,6 +99,12 @@
 		}
 	},
 	"contact": {
+		"heading": "Contact Form",
+		"description": {
+			"part1": "Our team works for the benefit of our clients, creating a product that helps everyone achieve success and confidence here and now.",
+			"part2": "We are always ready to help — just let us.",
+			"part3": "Leave a request and we will contact you."
+		},
 		"form": {
 			"name": "Your name",
 			"phone": "Phone",
