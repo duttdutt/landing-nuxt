@@ -1,17 +1,23 @@
 <script setup lang="ts">
-import { appDescription, appName } from './constants/head'
+import { APP_DESCRIPTION, APP_NAME } from './constants/head'
+
+const { locale } = useI18n()
+
+useSeoMeta({
+	title: APP_NAME,
+	description: APP_DESCRIPTION,
+	ogTitle: APP_NAME,
+	ogDescription: APP_DESCRIPTION,
+	ogUrl: 'https://landing-gloves.com',
+	ogLocale: () => locale.value,
+})
 
 useHead({
-	title: appName,
-	meta: [
-		{ name: 'description', content: appDescription },
-		{ name: 'apple-mobile-web-app-title', content: appName },
-	],
 	htmlAttrs: {
-		class: useColorMode().forced,
-		lang: 'ru',
+		lang: locale.value,
 	},
 	link: [
+		{ rel: 'preload', as: 'font', type: 'font/woff2', href: '/fonts/Montserrat.woff2', crossorigin: 'anonymous' },
 		{ rel: 'manifest', type: 'application/json', href: '/manifest.webmanifest' },
 		{ rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
 		{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
