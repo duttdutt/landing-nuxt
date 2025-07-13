@@ -2,13 +2,16 @@
 import { computed } from 'vue'
 import IconEn from '@/components/ui/icons/IconEn.vue'
 import IconRu from '@/components/ui/icons/IconRu.vue'
+import LanguageLabelEn from '../ui/text/LanguageLabelEn.vue'
+import LanguageLabelRu from '../ui/text/LanguageLabelRu.vue'
 
 const { locale } = useI18n()
 
 const switchLocalePath = useSwitchLocalePath()
 
 const isRu = computed(() => locale.value.startsWith('ru'))
-const currentIcon = computed(() => (isRu.value ? IconRu : IconEn))
+const currentLanguage = computed(() => (isRu.value ? LanguageLabelEn : LanguageLabelRu))
+const currentIcon = computed(() => (isRu.value ? IconEn : IconRu))
 const nextCode = computed(() => (isRu.value ? 'en' : 'ru'))
 
 function toggleLocale() {
@@ -23,6 +26,7 @@ function toggleLocale() {
 		aria-label="Переключение языка"
 		@click="toggleLocale"
 	>
+		<component :is="currentLanguage" />
 		<component :is="currentIcon" />
 	</button>
 </template>
@@ -35,7 +39,7 @@ function toggleLocale() {
 	align-items: center;
 	justify-content: center;
 
-	width: 2.3rem;
+	padding: 0 0.75rem;
 	height: 2.3rem;
 
 	cursor: pointer;
@@ -57,6 +61,14 @@ function toggleLocale() {
 
 	& svg {
 		width: 1.5rem;
+	}
+
+	span {
+		color: var(--text-primary-muted);
+	}
+
+	&:hover span {
+		color: var(--text-primary);
 	}
 }
 </style>
