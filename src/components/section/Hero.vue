@@ -1,120 +1,165 @@
 <script setup lang="ts">
+import IconArrowLink from '../ui/icons/IconArrowLink.vue'
+import UnderlineText from '../ui/UnderlineText.vue'
 </script>
 
 <template>
-	<section id="we" :class="$style.heroSection">
-		<div :class="$style.heroContainer">
-			<div :class="$style.textContent">
-				<h1 :class="$style.heroTitle">
-					<span>Спортивное оборудование</span>
-					<span>для любого клиента</span>
-					<span>с качеством и заботой</span>
-				</h1>
-				<div :class="$style.heroDescription">
-					Инвентарь и экипировка для любых целей — от домашних тренировок до профессиональных соревнований.
-					Надёжное качество и широкий ассортимент для любого уровня подготовки.
+	<section :class="$style.heroRoot">
+		<div :class="$style.wrapper">
+			<div :class="$style.innerWrapper">
+				<div :class="$style.grid">
+					<h1 :class="$style.heading">
+						<mark>{{ $t('hero.primary_heading') }}</mark>
+						<span>
+							<i18n-t keypath="hero.secondary_heading">
+								<UnderlineText>{{ $t('hero.secondary_heading_underline_part1') }}</UnderlineText>
+								<UnderlineText>{{ $t('hero.secondary_heading_underline_part2') }}</UnderlineText>
+							</i18n-t>
+						</span>
+					</h1>
+					<p :class="$style.description">
+						<span>{{ $t('hero.description_part1') }}</span>
+						<span>{{ $t('hero.description_part2') }}</span>
+					</p>
+					<div :class="$style.buttons">
+						<nuxt-link :class="$style.buttonLink" to="#contact">
+							<span>{{ $t('button.toOrder') }}</span>
+							<IconArrowLink />
+						</nuxt-link>
+						<nuxt-link :class="$style.buttonLink" to="#goods">
+							<span>{{ $t('button.goods') }}</span>
+							<IconArrowLink />
+						</nuxt-link>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 </template>
 
-<style module lang="scss">
-.heroSection {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+<style lang="scss" module>
+.heroRoot {
+	min-width: 400px;
 
-	width: 100%;
-	margin-top: 2rem;
+	.wrapper {
+		max-width: 1680px;
+		min-width: 400px;
+		padding-inline: var(--space-xs);
+		margin-bottom: var(--space-2xs);
+		margin-inline: auto;
 
-	user-select: none;
+		position: relative;
 
-	.heroContainer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		.innerWrapper {
+			padding-inline: var(--space-3xl);
+			padding-block: var(--space-l);
 
-		width: 70vw;
+			background-color: var(--bg-blue);
 
-		@media (max-width: 992px) {
-			width: 100vw;
-			padding: var(--space-xs);
+			@media (max-width: 768px) {
+				padding-inline: var(--space-l);
+			}
 		}
 	}
 }
 
-.textContent {
-	display: flex;
-	flex-direction: row;
-	gap: var(--space-2xl);
+.grid {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	gap: var(--space-m);
 
-	padding: 0rem;
-
-	@media (max-width: 992px) {
-		gap: var(--space-s);
+	@media (min-width: 768px) {
+		align-items: start;
+		grid-template-columns: auto 1fr;
 	}
 
-	@media (max-width: 576px) {
-		flex-direction: column;
-	}
-
-	.heroTitle {
+	.heading {
 		display: flex;
 		flex-direction: column;
-		flex: 0 1 30%;
+		gap: var(--space-l);
 
-		cursor: default;
+		max-width: 20ch;
 
-		color: var(--p-slate-0);
-		font-size: var(--step-2);
-		font-weight: 600;
-		line-height: 1.2;
-		white-space: nowrap;
+		font-weight: 700;
+		font-size: var(--step-4);
+		text-wrap: balance;
 
-		span {
-			display: block;
-
-			padding-left: var(--space-xs);
-
-			transition: all 0.3s ease;
-
-			border-left: 10px solid transparent;
-
-			&:nth-child(1),
-			&:nth-child(3) {
-				color: var(--color-primary);
-				border-left-color: var(--color-secondary);
-			}
-
-			&:nth-child(2) {
-				color: var(--color-secondary);
-				border-left-color: var(--color-primary);
-			}
+		mark {
+			background-color: var(--bg-mark);
+			color: var(--text-hero-primary);
 		}
 
-		&:hover span {
-			&:nth-child(1),
-			&:nth-child(3) {
-				color: var(--color-secondary);
-				border-left-color: var(--color-primary);
-			}
-
-			&:nth-child(2) {
-				color: var(--color-primary);
-				border-left-color: var(--color-secondary);
-			}
+		span {
+			font-size: var(--step-2);
+			color: var(--text-hero-secondary);
 		}
 	}
 
-	.heroDescription {
-		flex: 0 0 40%;
+	.description {
+		display: flex;
+		flex-direction: column;
 
-		color: var(--text-primary-muted);
-		font-size: var(--step-0);
-		line-height: 1.2;
-		hyphens: auto;
+		gap: var(--space-xs);
+		font-weight: 600;
+
+		text-wrap: balance;
+		font-style: italic;
+		font-size: var(--step-1);
+		color: var(--text-hero-secondary);
+	}
+
+	.buttons {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: flex-start;
+		gap: var(--space-xs);
+
+		.buttonLink {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: var(--space-2xs);
+
+			padding: var(--space-xs) var(--space-xs-s);
+
+			cursor: pointer;
+			transition: all 0.2s;
+
+			border: 1px solid var(--color-white);
+			text-decoration: none;
+			color: #fff;
+			font-size: var(--step--1);
+			font-weight: 800;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			user-select: none;
+
+			&:active > svg {
+				transform: scale(1.3);
+			}
+
+			&:first-child {
+				background-color: var(--color-white);
+				color: #000;
+
+				&:hover {
+					background-color: transparent;
+					color: var(--color-white);
+				}
+			}
+
+			&:last-child {
+				background-color: transparent;
+				color: var(--color-white);
+
+				&:hover {
+					background-color: var(--color-white);
+					color: var(--color-black);
+				}
+			}
+		}
 	}
 }
 </style>

@@ -1,31 +1,40 @@
 <script setup lang="ts">
-import { BENEFITS_ITEMS } from '@/constants/section_benefits'
 import BenefitsBlock from './BenefitsBlock.vue'
 import BenefitsCard from './BenefitsCard.vue'
+
+const { t } = useI18n()
+
+const benefitsItems = computed(() =>
+	Array.from({ length: 6 }, (_, index) => {
+		const id = index + 1
+		return {
+			id,
+			title: t(`benefits.items.${id}.title`),
+			description: t(`benefits.items.${id}.description`),
+		}
+	}),
+)
 </script>
 
 <template>
-	<section
-		id="benefits"
-		:class="$style.benefitsSection"
-	>
+	<section id="benefits" :class="$style.benefitsSection">
 		<div :class="$style.benefitsTop">
 			<div :class="$style.benefintsBadge">
-				<span>Путь создания</span>
+				<span>{{ $t("benefits.badge") }}</span>
 			</div>
 			<span :class="$style.benefintsPreHeading">
-				Шаг за шагом
+				{{ $t("benefits.heading") }}
 			</span>
 			<h1 :class="$style.benefitsHeading">
-				Знай, <em>что</em> ты получишь и<br><em>как</em> мы это сделаем.
+				{{ $t("benefits.motivation.part1") }}<em>{{ $t("benefits.motivation.part2") }}</em>{{
+					$t("benefits.motivation.part3") }}<br><em>{{ $t("benefits.motivation.part4") }}</em>{{
+					$t("benefits.motivation.part5") }}
 			</h1>
 		</div>
 		<div :class="$style.benefits">
-			<ol
-				:class="$style.benefitsList"
-			>
+			<ol :class="$style.benefitsList">
 				<BenefitsCard
-					v-for="item of BENEFITS_ITEMS"
+					v-for="item of benefitsItems"
 					:key="item.id"
 					:title="item.title"
 					:description="item.description"
@@ -114,5 +123,9 @@ import BenefitsCard from './BenefitsCard.vue'
 		grid-template-columns: repeat(var(--grid-placement, auto-fill), minmax(var(--grid-min-item-size, 16rem), 1fr));
 		grid-gap: var(--space-m);
 	}
+}
+
+em {
+	font-style: italic;
 }
 </style>

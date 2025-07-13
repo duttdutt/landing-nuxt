@@ -31,5 +31,71 @@
 	"button": {
 		"toOrder": "To order",
 		"goods": "goods"
+	},
+	"video": {
+		"line1": "The best use,",
+		"line2": "exclusively the best."
+	},
+	"benefits": {
+		"badge": "Path of creation",
+		"heading": "Step by step",
+		"motivation": {
+			"part1": "Know, ",
+			"part2": "what",
+			"part3": " you will get and ",
+			"part4": "how",
+			"part5": " we will do it."
+		},
+		"items": {
+			"1": {
+				"title": "Comfort",
+				"description": "Our boxing gloves are designed with the anatomical structure of the hand in mind, providing maximum comfort during training. They easily adapt to the shape of your hand and do not cause discomfort even during long sessions."
+			},
+			"2": {
+				"title": "Protection",
+				"description": "The gloves are equipped with a well-thought-out protection system that reduces the risk of injury for both you and your training partners. Reinforced inserts and dense padding provide reliable shock absorption. We care about your safety in every fight and training session."
+			},
+			"3": {
+				"title": "Durability",
+				"description": "We use only high-quality materials to ensure the durability of our boxing gloves. They withstand intense training and retain their shape even after many sparring sessions. You can be confident your investment will last a long time."
+			},
+			"4": {
+				"title": "Style",
+				"description": "Aesthetic design and a wide range of colors allow you to choose gloves that match your style and preferences. You’ll not only show your skills but also express your individuality in the ring. Stylish gloves will lift your spirits and add confidence!"
+			},
+			"5": {
+				"title": "Versatility",
+				"description": "Our range includes models for various types of martial arts and skill levels. Whether you train at home, in the gym, or prepare for competitions — we have gloves that are right for you."
+			},
+			"6": {
+				"title": "Reliability",
+				"description": "Every pair of gloves undergoes strict quality control. Seams, materials, and construction are tested for durability so you can train with confidence and focus only on results."
+			}
+		}
+	},
+	"faq": {
+		"heading": "FAQ",
+		"items": {
+			"0": {
+				"question": "Are your products suitable for beginners?",
+				"answer": "Yes, our gloves are suitable for all experience levels — from beginners to professionals."
+			},
+			"1": {
+				"question": "Can I order in bulk?",
+				"answer": "Yes, we handle both retail and wholesale orders. You can order in any volume — from single items to large batches. For wholesale customers, we offer special conditions, flexible discounts, and a personal manager. Contact us by phone or email to get a custom quote and discuss delivery terms. We are open to long-term cooperation and can adapt to your needs."
+			},
+			"2": {
+				"question": "How long does delivery take?",
+				"answer": "Delivery times depend on the region and chosen shipping method. Usually, it takes 2 to 7 business days. We'll provide a tracking number as soon as it's shipped."
+			},
+			"3": {
+				"question": "Can I return or exchange a product?",
+				"answer": "Yes, you can return or exchange a product within 14 days of receipt, provided it’s in original condition and packaging. See our return policy for details."
+			},
+			"4": {
+				"question": "What payment methods do you accept?",
+				"answer": "We accept Visa, MasterCard, Mir cards, as well as online banking and e-wallets. For bulk orders, payment by invoice is available."
+			}
+		}
 	}
 }

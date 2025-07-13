@@ -17,7 +17,7 @@ function toggleAnswer(id: number) {
 
 <template>
 	<section :class="$style.faqSection">
-		<Heading title="Частые вопросы" />
+		<Heading :title="$t('faq.heading')" />
 		<div :class="$style.wrapper">
 			<Accordion
 				v-for="item of faqItems" :id="item.id" :key="item.id" :question="item.question" :is-open="item.isOpen"
@@ -43,12 +43,18 @@ function toggleAnswer(id: number) {
 	background-color: var(--bg-faq);
 	color: var(--text-faq);
 
+	padding-bottom: var(--space-2xl);
+	@media (max-width: 600px) {
+	}
+
 	h3 {
 		color: var(--text-faq);
+		margin-bottom: var(--space-l);
 	}
 
 	.wrapper {
 		max-width: 80vw;
+
 		border-bottom: 1px solid var(--border-faq);
 	}
 }
