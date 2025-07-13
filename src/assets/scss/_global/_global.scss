@@ -1,6 +1,6 @@
 *::selection {
 	background: var(--color-orange);
-	color: var(--c-white);
+	color: var(--color-white);
 }
 
 html,
@@ -30,10 +30,4 @@ body {
 
 html.dark {
 	color-scheme: dark;
-}
-
-@supports (scrollbar-color: #0c6dff #0c6dff) {
-	html {
-		scrollbar-color: #0c6dff #0c6dff;
-	}
 }
