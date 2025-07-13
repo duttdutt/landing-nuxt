@@ -17,17 +17,17 @@ const props = defineProps<{
 .buttonContact {
 	padding-block: var(--space-xs);
 	padding-inline: var(--space-s);
-	border: 2px solid var(--color-primary);
 
 	position: relative;
 	transition: all 0.3s ease;
 	overflow: hidden;
 	z-index: 1;
 
-	font-size: var(--step--1);
-	font-family: inherit;
 	background-color: transparent;
 	color: var(--text-primary);
+	border: 2px solid var(--color-primary);
+	font-size: var(--step--1);
+	font-family: inherit;
 	text-align: center;
 	text-transform: uppercase;
 
@@ -60,12 +60,15 @@ const props = defineProps<{
 	}
 
 	&:active {
-		background-color: var(--color-primary-darker);
+		background-color: #ff0;
+		border-color: #f00;
 	}
 
 	&:focus {
 		outline: none;
-		border-color: var(--border-input-focus);
+		color: var(--color-white);
+		border-color: var(--color-primary-darker);
+		background-color: var(--color-primary-darker);
 	}
 }
 </style>
