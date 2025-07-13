@@ -1,2 +1,2 @@
-export const appName = 'GlovBox'
-export const appDescription = 'The best sports equipment'
+export const APP_NAME = 'GlovBox'
+export const APP_DESCRIPTION = 'The best sports equipment'
