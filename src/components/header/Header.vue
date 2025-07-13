@@ -39,7 +39,6 @@ const navItems = computed(() =>
 <style module lang="scss">
 .headerRoot {
 	width: 100%;
-	overflow: visible;
 
 	position: sticky;
 	top: 0;
@@ -67,7 +66,7 @@ const navItems = computed(() =>
 
 	transition: border-color 0.2s;
 
-	backdrop-filter: blur(100px);
+	background-color: var(--bg-primary);
 	border: 1px solid var(--border-primary);
 
 	@media (max-width: 768px) {
