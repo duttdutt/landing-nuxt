@@ -7,7 +7,7 @@ import ContactTextarea from '../ui/ContactTextarea.vue'
 const emit = defineEmits<{
 	(e: 'update:modal', value: boolean): void
 }>()
-
+const { t } = useI18n()
 const submitted = ref(false)
 const form = ref({ name: '', phone: '', email: '', message: '' })
 const errors = ref({ name: '', phone: '', email: '', message: '' })
@@ -15,12 +15,12 @@ const errors = ref({ name: '', phone: '', email: '', message: '' })
 function validate() {
 	const { name, phone, email, message } = form.value
 
-	errors.value.name = name.trim() ? '' : 'Введите имя'
-	errors.value.phone = /^\+?\d{10,15}$/.test(phone) ? '' : 'Неверный формат телефона'
+	errors.value.name = name.trim() ? '' : t('contact.errors.name')
+	errors.value.phone = /^\+?\d{10,15}$/.test(phone) ? '' : t('contact.errors.phone')
 	errors.value.email = email
-		? (/^[^\s@]+@[^\s@][^\s.@]*\.[^\s@]+$/.test(email) ? '' : 'Неверный email')
+		? (/^[^\s@]+@[^\s@][^\s.@]*\.[^\s@]+$/.test(email) ? '' : t('contact.errors.email'))
 		: ''
-	errors.value.message = message.trim() ? '' : 'Введите сообщение'
+	errors.value.message = message.trim() ? '' : t('contact.errors.message')
 
 	return !errors.value.name && !errors.value.phone && !errors.value.email && !errors.value.message
 }
@@ -36,13 +36,36 @@ function submitInfo() {
 <template>
 	<div :class="$style.left">
 		<form :class="$style.contactForm" @submit.prevent="submitInfo">
-			<ContactInput id="name" v-model="form.name" label="Как Вас зовут" type="text" :error="submitted ? errors.name : ''" />
-			<ContactInput id="phone" v-model="form.phone" label="Телефон" type="text" :error="submitted ? errors.phone : ''" />
-			<ContactInput id="email" v-model="form.email" label="Электронная почта" type="email" :error="submitted ? errors.email : ''" />
-			<ContactTextarea id="message" v-model="form.message" label="Сообщение" :error="submitted ? errors.message : ''" />
+			<ContactInput
+				id="name"
+				v-model="form.name"
+				:label="$t('contact.form.name')"
+				type="text"
+				:error="submitted ? errors.name : ''"
+			/>
+			<ContactInput
+				id="phone"
+				v-model="form.phone"
+				:label="$t('contact.form.phone')"
+				type="text"
+				:error="submitted ? errors.phone : ''"
+			/>
+			<ContactInput
+				id="email"
+				v-model="form.email"
+				:label="$t('contact.form.email')"
+				type="email"
+				:error="submitted ? errors.email : ''"
+			/>
+			<ContactTextarea
+				id="message"
+				v-model="form.message"
+				:label="$t('contact.form.submit')"
+				:error="submitted ? errors.message : ''"
+			/>
 			<div :class="$style.buttonForm">
-				<ContactButton label="Связаться" size="lg" variant="outline" type="submit">
-					Связаться
+				<ContactButton type="submit">
+					{{ $t('contact.form.submit') }}
 				</ContactButton>
 			</div>
 		</form>

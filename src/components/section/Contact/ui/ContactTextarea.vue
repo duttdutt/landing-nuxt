@@ -11,7 +11,7 @@ defineEmits(['update:modelValue'])
 
 <template>
 	<label for="message">
-		Сообщение
+		{{ props.label }}
 	</label>
 	<textarea
 		id="message" rows="5" :value="props.modelValue" :class="{ [$style.error]: props.error }"

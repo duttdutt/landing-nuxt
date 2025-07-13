@@ -97,5 +97,20 @@
 				"answer": "We accept Visa, MasterCard, Mir cards, as well as online banking and e-wallets. For bulk orders, payment by invoice is available."
 			}
 		}
+	},
+	"contact": {
+		"form": {
+			"name": "Your name",
+			"phone": "Phone",
+			"email": "Email",
+			"message": "Message",
+			"submit": "Send message"
+		},
+		"errors": {
+			"name": "Please enter your name",
+			"phone": "Invalid phone format",
+			"email": "Invalid email",
+			"message": "Please enter a message"
+		}
 	}
 }
