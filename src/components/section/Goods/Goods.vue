@@ -1,28 +1,23 @@
 <script setup lang="ts">
 import Heading from '@/components/ui/Heading.vue'
-import Dumbbels from '~/assets/images/Dumbbels.webp'
-import GlovesSecond from '~/assets/images/Gloves_Second.webp'
-import Punching_Bag from '~/assets/images/Punching_Bag.webp'
-import Rashguard from '~/assets/images/Rashguard.webp'
-import Rope from '~/assets/images/Rope.webp'
-import Yoga from '~/assets/images/Yoga.webp'
-
+import { GOODS_IMAGES } from '@/constants/goods'
 import Card from './Card.vue'
 
-interface ImageItem { src: string, alt: string, title: string, description: string }
-const images = ref<ImageItem[]>([
-	{ src: GlovesSecond, alt: 'Боксерские перчатки', title: 'Боксерские перчатки', description: 'Профессиональные боксерские перчатки из качественной искусственной кожи. Обеспечивают защиту рук и оптимальный уровень амортизации при ударах.' },
-	{ src: Punching_Bag, alt: 'Боксерская груша', title: 'Боксерская груша', description: 'Прочная настенная груша с усиленной строчкой швов. Идеальна для тренировок на силу и выносливость, выдерживает интенсивные удары.' },
-	{ src: Dumbbels, alt: 'Набор гантелей', title: 'Набор гантелей', description: 'Регулируемые гантели с фиксирующими замками. Отличный выбор для домашних тренировок: легко менять вес для разных упражнений.' },
-	{ src: Yoga, alt: 'Йога-мат', title: 'Йога-мат', description: 'Удобный нескользящий мат толщиной 6 мм для занятий йогой и фитнесом. Лёгкий и компактный, легко сворачивается и транспортируется.' },
-	{ src: Rope, alt: 'Скакалка', title: 'Скакалка', description: 'Регулируемая скоростная скакалка с подшипниками. Отлично подходит для кардиотренировок и разминки перед основной нагрузкой.' },
-	{ src: Rashguard, alt: 'Фитнес-резинка', title: 'Фитнес-резинка', description: 'Набор эспандеров разной степени сопротивления. Идеальны для растяжки, силовых и реабилитационных упражнений.' },
-])
+const { t } = useI18n()
+
+const images = computed(() =>
+	GOODS_IMAGES.map(image => ({
+		src: image.src,
+		alt: image.alt,
+		title: t(`goods.items.${image.key}.title`),
+		description: t(`goods.items.${image.key}.description`),
+	})),
+)
 </script>
 
 <template>
 	<section id="goods" :class="$style.gallerySection">
-		<Heading title="Товары" mode="black" />
+		<Heading :title="t('goods.heading')" mode="black" />
 		<div :class="$style.wrapper">
 			<ul :class="$style.autoGrid">
 				<Card
@@ -36,7 +31,7 @@ const images = ref<ImageItem[]>([
 			</ul>
 		</div>
 		<div :class="$style.additionalText">
-			И многое другое...
+			{{ t('goods.additional') }}
 		</div>
 	</section>
 </template>

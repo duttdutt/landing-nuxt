@@ -36,6 +36,36 @@
 		"line1": "The best use,",
 		"line2": "exclusively the best."
 	},
+	"goods": {
+		"heading": "Goods",
+		"additional": "And much more...",
+		"items": {
+			"gloves": {
+				"title": "Boxing gloves",
+				"description": "Professional boxing gloves made of high-quality synthetic leather. Provide hand protection and optimal shock absorption."
+			},
+			"punching_bag": {
+				"title": "Punching bag",
+				"description": "Durable wall-mounted bag with reinforced seams. Ideal for strength and endurance training, withstands intense punches."
+			},
+			"dumbbells": {
+				"title": "Dumbbell set",
+				"description": "Adjustable dumbbells with locking clips. Great for home workouts: easily change the weight for different exercises."
+			},
+			"yoga_mat": {
+				"title": "Yoga mat",
+				"description": "Comfortable non-slip 6mm mat for yoga and fitness. Lightweight and compact, easy to roll up and carry."
+			},
+			"rope": {
+				"title": "Jump rope",
+				"description": "Adjustable speed jump rope with bearings. Perfect for cardio and warm-up before the main load."
+			},
+			"resistance_band": {
+				"title": "Resistance bands",
+				"description": "Set of resistance bands of different strengths. Ideal for stretching, strength, and rehab exercises."
+			}
+		}
+	},
 	"benefits": {
 		"badge": "Path of creation",
 		"heading": "Step by step",
