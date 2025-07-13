@@ -57,6 +57,10 @@ function handleClick() {
 	@media (max-width: 768px) {
 		margin-left: auto;
 	}
+
+	@media (max-width: 450px) {
+		display: none;
+	}
 }
 
 @keyframes smoothPulse {

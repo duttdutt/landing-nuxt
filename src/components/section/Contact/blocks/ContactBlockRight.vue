@@ -54,6 +54,10 @@ import IconPhone from '@/components/ui/icons/IconPhone.vue'
 			font-weight: 700;
 			word-break: break-word;
 			hyphens: auto;
+
+			@media (max-width: 600px) {
+				font-size: var(--step-6);
+			}
 		}
 
 		div {
