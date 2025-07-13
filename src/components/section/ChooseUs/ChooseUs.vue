@@ -75,7 +75,7 @@ onBeforeUnmount(() => {
 	flex-direction: column;
 	align-items: center;
 
-	margin: 0;
+	margin-bottom: var(--space-l);
 
 	width: 100%;
 	height: 55vh;
@@ -83,6 +83,24 @@ onBeforeUnmount(() => {
 	user-select: none;
 
 	background-color: var(--bg-primary);
+
+	@media (max-width: 1024px) {
+		margin-bottom: var(--space-3xs);
+		height: 40vh;
+	}
+
+	@media (max-width: 768px) {
+		margin-bottom: 0;
+		padding: 0;
+		height: 30vh;
+	}
+
+	@media (max-width: 480px) {
+		min-width: 100vw;
+		height: 30vh;
+		margin-bottom: 1rem;
+		padding: 2rem 1rem;
+	}
 }
 
 .line {
@@ -91,24 +109,8 @@ onBeforeUnmount(() => {
 	font-size: var(--step-5);
 	font-weight: 800;
 	text-align: center;
-}
 
-@media (max-width: 1024px) {
-	.chooseUs {
-		margin-bottom: 10rem;
-		height: 40vh;
-	}
-}
-
-@media (max-width: 480px) {
-	.chooseUs {
-		min-width: 100vw;
-		height: 30vh;
-		margin-bottom: 5rem;
-		padding: 2rem 1rem;
-	}
-
-	.line {
+	@media (max-width: 480px) {
 		padding: 0;
 
 		font-size: 1.5rem !important;
