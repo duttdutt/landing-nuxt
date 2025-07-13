@@ -17,7 +17,7 @@ const props = defineProps<{
 
 	color: var(--text-primary);
 	font-size: var(--step-6);
-	font-weight: 600;
+	font-weight: 700;
 	user-select: none;
 }
 </style>
