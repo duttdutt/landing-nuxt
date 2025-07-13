@@ -1,21 +1,19 @@
 <template>
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
-		width="36"
-		height="36"
-		viewBox="0 0 36 36"
+		width="301"
+		height="201"
+		viewBox="0 0 301 201"
 	>
-		<path
-			fill="#ce2028"
-			d="M36 27a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4v-4h36z"
+		<rect
+			width="301"
+			height="201"
+			fill="none"
 		/>
-		<path
-			fill="#22408c"
-			d="M0 13h36v10H0z"
-		/>
-		<path
-			fill="#eee"
-			d="M32 5H4a4 4 0 0 0-4 4v4h36V9a4 4 0 0 0-4-4"
-		/>
+		<g fill="none">
+			<path fill="#e3e3e3" d="M.5.5h300v100H.5z" />
+			<path fill="#d52b1e" d="M.5 100.5h300v100H.5z" />
+			<path fill="#0039a6" d="M.5 67.166h300v66.667H.5z" />
+		</g>
 	</svg>
 </template>
