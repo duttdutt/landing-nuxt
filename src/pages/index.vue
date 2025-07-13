@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import AdditionalInfo from '@/components/section/AdditionalInfo.vue'
-import Benefits from '@/components/section/Benefits/Benefits.vue'
-import ChooseUs from '@/components/section/ChooseUs/ChooseUs.vue'
-import ContactSection from '@/components/section/Contact/ContactSection.vue'
-import Faq from '@/components/section/Faq/Faq.vue'
-import Goods from '@/components/section/Goods/Goods.vue'
-import Hero2 from '@/components/section/Hero2.vue'
-import Video from '@/components/section/Video.vue'
+import SectionAdditionalInfo from '@/components/section/AdditionalInfo.vue'
+import SectionBenefits from '@/components/section/Benefits/Benefits.vue'
+import SectionChooseUs from '@/components/section/ChooseUs/ChooseUs.vue'
+import SectionContact from '@/components/section/Contact/Contact.vue'
+import SectionFaq from '@/components/section/Faq/Faq.vue'
+import SectionGoods from '@/components/section/Goods/Goods.vue'
+import SectionHero from '@/components/section/Hero.vue'
+import SectionVideo from '@/components/section/Video.vue'
 
 definePageMeta({
 	layout: 'main-layout',
@@ -14,14 +14,14 @@ definePageMeta({
 </script>
 
 <template>
-	<main>
-		<Hero2 />
-		<AdditionalInfo />
-		<ChooseUs />
-		<Video />
-		<Goods />
-		<Benefits />
-		<Faq />
-		<ContactSection />
+	<main id="we">
+		<SectionHero />
+		<SectionAdditionalInfo />
+		<SectionChooseUs />
+		<SectionVideo />
+		<SectionGoods />
+		<SectionBenefits />
+		<SectionFaq />
+		<SectionContact />
 	</main>
 </template>
