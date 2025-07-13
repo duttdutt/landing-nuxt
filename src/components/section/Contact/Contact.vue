@@ -29,7 +29,7 @@ function closeModal() {
 	align-items: center;
 
 	width: 100%;
-	height: 120vh;
+	height: 100vh;
 
 	color: var(--text-primary);
 	background-color: var(--bg-primary);
