@@ -58,6 +58,9 @@ export default defineNuxtConfig({
 		constants: fileURLToPath(new URL('./constants', import.meta.url)),
 	},
 	compatibilityDate: '2025-05-15',
+	nitro: {
+		static: true,
+	},
 
 	/**
 	 * Vite
