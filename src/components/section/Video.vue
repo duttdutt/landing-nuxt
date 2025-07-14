@@ -32,7 +32,7 @@ export default defineComponent({
 
 	@media (max-width: 480px) {
 		padding: 0;
-		margin: 0;
+		margin: 0 0 2rem 0;
 	}
 
 	@media (max-width: 768px) {

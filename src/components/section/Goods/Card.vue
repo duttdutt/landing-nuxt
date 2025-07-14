@@ -40,11 +40,23 @@ const props = defineProps<{
 	border: 5px solid #000;
 	box-shadow: 10px 10px 0 #000;
 
+	@media (max-width: 480px) {
+		border-width: 3px;
+		box-shadow: 4px 4px 0 #000;
+	}
+
+	@media (max-width: 360px) {
+		border-width: 2px;
+		box-shadow: 3px 3px 0 #000;
+	}
+
 	&:hover {
 		transform: translateY(-4px);
 	}
 
 	.imageWrapper {
+		overflow: hidden;
+
 		&::before {
 			width: 100%;
 
@@ -76,6 +88,7 @@ const props = defineProps<{
 
 			text-transform: uppercase;
 			font-size: var(--step-0);
+			word-break: break-word;
 			font-weight: 800;
 		}
 

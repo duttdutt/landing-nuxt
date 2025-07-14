@@ -67,8 +67,10 @@ const benefitsItems = computed(() =>
 	}
 
 	@media (max-width: 480px) {
+		padding: var(--space-xs);
 		gap: var(--space-xs);
 		min-height: 80vh;
+		padding: 0;
 	}
 
 	.benefitsTop {
@@ -76,8 +78,6 @@ const benefitsItems = computed(() =>
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
-
-		margin-block: var(--space-m);
 
 		.benefintsBadge {
 			display: inline-block;
@@ -110,18 +110,22 @@ const benefitsItems = computed(() =>
 
 	.benefitsList {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
-		grid-gap: 2rem;
+		grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+		gap: var(--space-m);
+
+		@media (max-width: 360px) {
+			gap: var(--space-s);
+		}
 	}
 
 	.benefitsBlock {
-		--gutter: var(--space-m);
-		--grid-placement: auto-fit;
-		--grid-min-item-size: clamp(20rem, 30vw, 33rem);
+		gap: var(--space-m);
 
-		display: grid;
-		grid-template-columns: repeat(var(--grid-placement, auto-fill), minmax(var(--grid-min-item-size, 16rem), 1fr));
-		grid-gap: var(--space-m);
+		grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+
+		@media (max-width: 360px) {
+			gap: var(--space-s);
+		}
 	}
 }
 

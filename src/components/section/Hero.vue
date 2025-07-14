@@ -39,12 +39,15 @@ import UnderlineText from '../ui/UnderlineText.vue'
 
 <style lang="scss" module>
 .heroRoot {
-	min-width: 400px;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	hyphens: auto;
+	width: 100%;
 
 	.wrapper {
 		max-width: 1680px;
-		min-width: 400px;
-		padding-inline: var(--space-xs);
+		padding-inline: var(--space-2xs);
+		width: 100%;
 		margin-bottom: var(--space-2xs);
 		margin-inline: auto;
 
@@ -58,6 +61,11 @@ import UnderlineText from '../ui/UnderlineText.vue'
 
 			@media (max-width: 768px) {
 				padding-inline: var(--space-l);
+			}
+
+			@media (max-width: 480px) {
+				padding-inline: var(--space-s); // или даже 0.5rem
+				padding-block: var(--space-s);
 			}
 		}
 	}
@@ -121,7 +129,9 @@ import UnderlineText from '../ui/UnderlineText.vue'
 			align-items: center;
 			justify-content: center;
 			gap: var(--space-2xs);
+			flex: 1 1 auto;
 
+			min-width: 120px;
 			padding: var(--space-xs) var(--space-xs-s);
 
 			cursor: pointer;
@@ -135,6 +145,11 @@ import UnderlineText from '../ui/UnderlineText.vue'
 			text-transform: uppercase;
 			letter-spacing: 1px;
 			user-select: none;
+
+			@media (max-width: 480px) {
+				font-size: 0.75rem;
+				padding: 0.5rem;
+			}
 
 			&:active > svg {
 				transform: scale(1.3);

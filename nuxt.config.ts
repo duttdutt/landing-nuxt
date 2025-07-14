@@ -2,6 +2,7 @@ import { fileURLToPath } from 'node:url'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+
 	modules: [
 		'@nuxt/eslint',
 		'@nuxtjs/i18n',
@@ -38,11 +39,15 @@ export default defineNuxtConfig({
 		fallback: 'dark',
 		storage: 'cookie',
 	},
+	runtimeConfig: {
+		telegramToken: process.env.NUXT_TELEGRAM_TOKEN,
+		telegramChatId: process.env.NUXT_TELEGRAM_CHAT_ID,
+	},
 
 	dir: {
 		public: '../public',
 	},
-	srcDir: './src',
+	srcDir: 'src',
 
 	/**
 	 * Aliases
@@ -110,9 +115,7 @@ export default defineNuxtConfig({
 			},
 		},
 		display: 'swap',
-		prelod: true,
-		download: true,
-		outputDir: 'assets',
+		preload: true,
 		useStylesheet: true,
 	},
 
@@ -126,19 +129,19 @@ export default defineNuxtConfig({
 		locales: [
 			{
 				code: 'en',
-				language: 'en-US',
+				language: 'en',
 				name: 'English',
 				file: 'en.json',
 			},
 			{
 				code: 'ru',
-				language: 'ru-RU',
+				language: 'ru',
 				name: 'Русский',
 				file: 'ru.json',
 			},
 		],
 		lazy: true,
-		defaultLocale: 'ru-RU',
+		defaultLocale: 'ru',
 		bundle: {
 			optimizeTranslationDirective: false,
 		},

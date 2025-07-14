@@ -14,5 +14,9 @@ export default withNuxt(
 			indent: 'tab',
 		},
 		typescript: true,
+	}, {
+		rules: {
+			'node/prefer-global/process': 'off',
+		},
 	}),
 )

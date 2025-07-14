@@ -5,6 +5,7 @@ import Accordion from '@/components/ui/Accordion/Accordion.vue'
 import Heading from '@/components/ui/Heading.vue'
 import { FAQ_ITEMS } from '@/constants/section_faq'
 
+const { t } = useI18n()
 const faqItems = ref<FaqItem[]>(FAQ_ITEMS)
 
 function toggleAnswer(id: number) {
@@ -20,10 +21,12 @@ function toggleAnswer(id: number) {
 		<Heading :title="$t('faq.heading')" />
 		<div :class="$style.wrapper">
 			<Accordion
-				v-for="item of faqItems" :id="item.id" :key="item.id" :question="item.question" :is-open="item.isOpen"
+				v-for="item of faqItems"
+				:key="item.id"
+				v-bind="item"
 				@toggle-answer="toggleAnswer"
 			>
-				{{ item.answer }}
+				{{ t(item.answerKey) }}
 			</Accordion>
 		</div>
 	</section>
@@ -44,8 +47,6 @@ function toggleAnswer(id: number) {
 	color: var(--text-faq);
 
 	padding-bottom: var(--space-2xl);
-	@media (max-width: 600px) {
-	}
 
 	h3 {
 		color: var(--text-faq);

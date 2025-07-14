@@ -1,14 +1,16 @@
 <script setup lang="ts">
 interface AccordionProps {
-	question: string
-	isOpen: boolean
 	id: number
+	questionKey: string
+	answerKey: string
+	isOpen: boolean
 }
 
 const props = defineProps<AccordionProps>()
 const emit = defineEmits<{
 	(e: 'toggleAnswer', id: number): void
 }>()
+const { t } = useI18n()
 
 function handleClick() {
 	emit('toggleAnswer', props.id)
@@ -23,7 +25,7 @@ function handleClick() {
 					0{{ props.id + 1 }}
 				</div>
 				<div :class="$style.accordionQuestion">
-					{{ props.question }}
+					{{ t(props.questionKey) }}
 				</div>
 			</div>
 			<div :class="[$style.accordionIcon, props.isOpen ? $style.open : '']" />

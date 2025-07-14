@@ -1,12 +1,14 @@
 <script setup>
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 
+const { t } = useI18n()
+
 const lines = [
-	'СТАНЬ СИЛЬНЕЕ.',
-	'СТАНЬ ВЫНОСЛИВЕЕ.',
-	'СТАНЬ НЕПОБЕДИМЫМ.',
-	'ПРЕОДОЛЕЙ СВОИ ГРАНИЦЫ.',
-	'СДЕЛАЙ ВЫБОР — ОН В ТВОИХ РУКАХ.',
+	t('chooseUs.line1'),
+	t('chooseUs.line2'),
+	t('chooseUs.line3'),
+	t('chooseUs.line4'),
+	t('chooseUs.line5'),
 ]
 
 const lineRefs = ref([])

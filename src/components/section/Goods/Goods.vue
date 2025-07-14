@@ -48,6 +48,13 @@ const images = computed(() =>
 
 	background-color: #fff;
 
+	@media (max-width: 480px) {
+		--auto-grid-min-size: 12rem;
+	}
+	@media (max-width: 360px) {
+		--auto-grid-min-size: 10rem;
+	}
+
 	h3 {
 		padding-inline: var(--space-xs);
 
@@ -82,7 +89,7 @@ const images = computed(() =>
 	.autoGrid {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size, 16rem), 1fr));
-		grid-gap: 1rem;
+		gap: 1rem;
 	}
 
 	.autoGrid > * {

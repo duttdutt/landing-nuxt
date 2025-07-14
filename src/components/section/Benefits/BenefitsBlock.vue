@@ -106,4 +106,36 @@ function scrollToContactSection() {
 		}
 	}
 }
+
+@media (max-width: 768px) {
+	.wrapper {
+		.container {
+			padding: var(--space-s);
+		}
+
+		.mainHeading {
+			height: var(--space-l);
+			svg {
+				height: 0.875rem;
+			}
+		}
+	}
+}
+
+@media (max-width: 375px) {
+	.wrapper {
+		.container {
+			padding: var(--space-xs);
+
+			.containerTop .text1 {
+				line-height: 1.3;
+			}
+			.buttonContainer {
+				width: 100%;
+				text-align: center;
+				padding: 0.5rem;
+			}
+		}
+	}
+}
 </style>

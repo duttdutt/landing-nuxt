@@ -25,10 +25,33 @@ function validate() {
 	return !errors.value.name && !errors.value.phone && !errors.value.email && !errors.value.message
 }
 
-function submitInfo() {
+async function submitInfo() {
 	submitted.value = true
-	if (validate()) {
-		emit('update:modal', true)
+
+	if (!validate())
+		return
+
+	try {
+		const { error } = await useFetch('/api/telegram', {
+			method: 'POST',
+			body: {
+				name: form.value.name,
+				phone: form.value.phone,
+				message: form.value.message,
+			},
+		})
+
+		if (error.value) {
+			console.warn(`Ошибка отправки: ${error.value.message}`)
+		}
+		else {
+			emit('update:modal', true)
+			form.value = { name: '', phone: '', email: '', message: '' }
+			submitted.value = false
+		}
+	}
+	catch (e) {
+		console.error('Ошибка сети. Попробуйте ещё раз.', e)
 	}
 }
 </script>

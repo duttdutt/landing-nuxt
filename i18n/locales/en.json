@@ -19,15 +19,6 @@
 		"retail": "retail",
 		"last_part": "— we offer both options."
 	},
-	"motivation": {
-		"lines": [
-			"СТАНЬ СИЛЬНЕЕ.",
-			"СТАНЬ ВЫНОСЛИВЕЕ.",
-			"СТАНЬ НЕПОБЕДИМЫМ.",
-			"ПРЕОДОЛЕЙ СВОИ ГРАНИЦЫ.",
-			"СДЕЛАЙ ВЫБОР — ОН В ТВОИХ РУКАХ."
-		]
-	},
 	"button": {
 		"toOrder": "To order",
 		"goods": "goods"
@@ -35,6 +26,13 @@
 	"video": {
 		"line1": "The best use,",
 		"line2": "exclusively the best."
+	},
+	"chooseUs": {
+		"line1": "BECOME STRONGER.",
+		"line2": "BECOME ENDURING.",
+		"line3": "BECOME INVINCIBLE.",
+		"line4": "BREAK YOUR LIMITS.",
+		"line5": "MAKE A CHOICE — IT'S IN YOUR HANDS."
 	},
 	"goods": {
 		"heading": "Goods",
@@ -105,28 +103,16 @@
 	},
 	"faq": {
 		"heading": "FAQ",
-		"items": {
-			"0": {
-				"question": "Are your products suitable for beginners?",
-				"answer": "Yes, our gloves are suitable for all experience levels — from beginners to professionals."
-			},
-			"1": {
-				"question": "Can I order in bulk?",
-				"answer": "Yes, we handle both retail and wholesale orders. You can order in any volume — from single items to large batches. For wholesale customers, we offer special conditions, flexible discounts, and a personal manager. Contact us by phone or email to get a custom quote and discuss delivery terms. We are open to long-term cooperation and can adapt to your needs."
-			},
-			"2": {
-				"question": "How long does delivery take?",
-				"answer": "Delivery times depend on the region and chosen shipping method. Usually, it takes 2 to 7 business days. We'll provide a tracking number as soon as it's shipped."
-			},
-			"3": {
-				"question": "Can I return or exchange a product?",
-				"answer": "Yes, you can return or exchange a product within 14 days of receipt, provided it’s in original condition and packaging. See our return policy for details."
-			},
-			"4": {
-				"question": "What payment methods do you accept?",
-				"answer": "We accept Visa, MasterCard, Mir cards, as well as online banking and e-wallets. For bulk orders, payment by invoice is available."
-			}
-		}
+		"q0": "Are your products suitable for beginners?",
+		"a0": "Yes, our gloves are suitable for all levels — from beginners to professionals.",
+		"q1": "Can I order products in bulk?",
+		"a1": "Yes, we handle both retail and wholesale orders. You can order any quantity — from single items to large batches. We offer special terms for wholesale clients, including a flexible discount system and a dedicated account manager. Contact us via phone or email to get a personalized offer, calculate the cost, and discuss delivery timelines. We are open to long-term partnerships and ready to adapt to your needs.",
+		"q2": "How long does delivery take?",
+		"a2": "Delivery times depend on your region and chosen shipping method. Typically, it takes 2 to 7 business days. A tracking number will be provided once the order is shipped.",
+		"q3": "Can I return or exchange a product?",
+		"a3": "Yes, you can return or exchange an item within 14 days of receiving it, provided the product and packaging are in good condition. See our return policy for details.",
+		"q4": "What payment methods do you accept?",
+		"a4": "We accept Visa, MasterCard, Mir, online banking, and e-wallets. For wholesale orders, payment by invoice is also available."
 	},
 	"contact": {
 		"heading": "Contact Form",

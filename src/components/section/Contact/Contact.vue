@@ -35,6 +35,10 @@ function closeModal() {
 	background-color: var(--bg-primary);
 	font-size: var(--step--1);
 
+	@media (max-width: 480px) {
+		margin-block: 5rem;
+	}
+
 	& > div {
 		max-width: 70vw;
 	}

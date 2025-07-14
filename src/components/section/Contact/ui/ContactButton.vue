@@ -19,7 +19,6 @@ const props = defineProps<{
 	padding-inline: var(--space-s);
 
 	position: relative;
-	transition: all 0.3s ease;
 	overflow: hidden;
 	z-index: 1;
 
@@ -28,34 +27,31 @@ const props = defineProps<{
 	border: 2px solid var(--color-primary);
 	font-size: var(--step--1);
 	font-family: inherit;
+	font-weight: bold;
 	text-align: center;
 	text-transform: uppercase;
+	transition: color 0.3s ease;
 
 	&::before {
-		display: block;
 		content: '';
-
-		width: 0;
-		height: 300%;
-
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		z-index: -1;
-
-		transform: translate(-50%, -50%) rotate(45deg);
-		transition: 0.5s ease;
-
+		transform: translate(-50%, -50%) rotate(45deg) scaleX(0);
+		transform-origin: center;
+		width: 100%;
+		height: 1000%;
 		background: var(--color-primary);
+		z-index: -1;
+		transition: transform 0.5s ease;
 	}
 
 	&:hover {
 		cursor: pointer;
-
 		color: var(--color-white);
 
 		&::before {
-			width: 125%;
+			transform: translate(-50%, -50%) rotate(45deg) scaleX(2.5);
 		}
 	}
 
